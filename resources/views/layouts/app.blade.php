@@ -34,8 +34,6 @@
               <img class='navbar-logo' src="{{ asset('images/logo.png') }}">
               {{ config('app.name', 'HakadoruShare') }}
             </a>
-
-            <test ></test>
             <!-- ヘッダー右側  -->
             <ul class="navbar-nav ml-auto">
               @guest

@@ -5,13 +5,9 @@
 @endsection
 
 @section('content')
-
 <div class="container">
-  <main class="pb-3">
-    <div>
-      <div id="p-index" class="p-index">
-        <div class="p-index__image">
-          <p class="p-index--copy">捗る商品を共有しよう</p>
+        <div class="top-head">
+          <p class="top-head-text">捗る商品を共有しよう</p>
           <div class="p-index__search-form text-center">
             <div class="container">
             <img src="{{ asset('images/logo.png') }}" class="img-fluid" alt="Responsive image" width="15%" height="15%">
@@ -123,11 +119,9 @@
           </div>
         </div>
       </div>
-      <example-component>
-</example-component>
+
     </div>
 
-  </main>
 </div>
 @endsection
 
