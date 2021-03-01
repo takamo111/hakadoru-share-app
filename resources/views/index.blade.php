@@ -1,71 +1,77 @@
 @extends('layouts.app')
 
 @section('css')
-    <link href="{{ asset('css/top.css') }}" rel="stylesheet">
+    link href="{{ asset('css/top.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
-<div class="container">
-        <div class="top-head">
-          <p class="top-head-text">捗る商品を共有しよう</p>
-          <div class="p-index__search-form text-center">
-            <div class="container">
-            <img src="{{ asset('images/logo.png') }}" class="img-fluid" alt="Responsive image" width="15%" height="15%">
-              <div class="row justify-content-center">
-                <div>
-                  <div class="card-body card-body-top p-2">
-                    <form action="/shop/search" method="get" class="form-inline"> <input type="hidden" name="_token" value="">
-                      <div class="d-flex">
-                        <div class="form-group"> <select lang="ja" id="pref_id" name="pref_id" class="form-areaPrefInfo form-control"><option value="13"></select></div>
-                        <div class="form-group ml-2"><input type="text" name="keyword" id="keyword" placeholder="amazon.com" class="form-control" style="width: 180px;"></div>
-                        <div><button class="btn-flat-border ml-2 col-xs-1 "><i class="fa fa-search"></i>
-                        </button> 
-                        </div>
-                      </div>
-                    </form>
+  <!--トップ -->
+  <div class="container">
+    <div class="top-head">
+      <p class="top-head-text">捗る商品を共有しよう</p>
+      <div class="text-center">
+        <div class="container">
+          <img src="{{ asset('images/logo.png') }}" class="img-fluid" alt="Responsive image" width="18%" height="18%"></img>
+          <div class="row justify-content-center">
+            <div>
+              <div class="card-body card-body-top p-2">
+                <form action="/shop/search" method="get" class="form-inline"> <input type="hidden" name="_token" value="">
+                  <div class="d-flex">
+                    <div class="form-group"> <select lang="ja" id="pref_id" name="pref_id" class="form-areaPrefInfo form-control"><option value="13"></select></div>
+                    <div class="form-group ml-2"><input type="text" name="keyword" id="keyword" placeholder="amazon.com" class="form-control" style="width: 180px;"></div>
+                      <button class="btn-flat-border ml-2 col-xs-1 "><i class="fa fa-search"></i>
+                      </button> 
+                    </div>
                   </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--センター -->
+    <section class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-center">
+              <h1 class="mt-5 text-secondary "> ハカドル=シェアとは </h1>
+              <div class="m-3  border-bottom border-primary "> </div>
+            </div>
+            <h4 class="text-center font-weight-bold">便利商品のレビューサイトです。</h4>
+            <h6 class="text-center font-weight-bold">ネットでたまに見かける便利な商品ランキングって見ているだけでわくわくしませんか？</h6>
+            <h6 class="text-center font-weight-bold">ネットでたまに</h6>
+            <h6 class="text-center font-weight-bold">ネットでたまに</h6>
+            <h6 class="text-center font-weight-bold">ネットでたまに</h6>
+            <h6 class="text-center font-weight-bold">ネットでたまに</h6>
+            <div class="text-center mt-5"> 
+              <a href="{{route('articles.create')}}" class="btn btn-danger btn-lg">
+              <i class="fa fa-edit mr-2"></i>
+                投稿する
+              </a>
+              <p class="text-center font-weight-bold mt-2"> <span style="background: linear-gradient(transparent 50%, yellow 50%); font-size: 20px;">あなたのオススメ商品を教えてください！</span> </p>
+            </div>
+            <div class="row mb-3 mt-5">
+              <div class="col-md-6 text-center">
+                <div>
+                  <div class="card-ttl"> <i class="fa fa-edit fa-3x"></i> <span class="font-weight-bold">レビューする</span> </div>
+                  <h6 class="text-center font-weight-bold mt-3">ネットでたまに</h6>
+                </div>
+              </div>
+              <div class="col-md-6 text-center ">
+                <div>
+                  <div class="card-ttl"> <i class="fas fa-comment fa-3x"></i> <span class="font-weight-bold">レビューを見る</span> </div>
+                  <h6 class="text-center font-weight-bold mt-3">ネットでたまに</h6>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <section class="p-index__point bg-light">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12 col-12">
-                <div class="text-center">
-                  <h2 id="description"> ハカドルシェアとは </h2>
-                </div>
-                <p class="text-center h2-desc font-weight-bold">便利商品のレビューサイトです。</p>
-                <p class="text-center h2-desc font-weight-bold">ネットでたまに見かける便利な商品ランキングって見ているだけでわくわくしませんか？</p>
-                <p class="text-center h2-desc font-weight-bold">このサイトでは</p>
-                <p class="text-center h2-desc font-weight-bold">サンプル</p>
-                <p class="text-center h2-desc font-weight-bold"></p>
-                <p class="text-center h2-desc font-weight-bold"></p>
-                <div class="text-center mt-5"> <a href="https://musicstore-reviews.com/shop" class="btn btn-danger btn-lg">
-                        <i class="fa fa-edit mr-2"></i>
-                        投稿する
-                    </a>
-                  <p class="text-center font-weight-bold mt-2"> <span style="background: linear-gradient(transparent 50%, yellow 50%); font-size: 20px;">あなたのオススメ商品を教えてください！</span> </p>
-                </div>
-                <div class="row mb-3 mt-5">
-                  <div class="col-md-6 col-sm-6 col-12">
-                    <div>
-                      <div class="card-ttl"> <i class="fa fa-edit fa-3x"></i> <span class="font-weight-bold">レビューする</span> </div>
-                      <p class="w-75 mx-auto font-weight-bold">レビューしましょう</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-12">
-                    <div>
-                      <div class="card-ttl"> <i class="fas fa-comment fa-3x"></i> <span class="font-weight-bold">レビューを見る</span> </div>
-                      <p class="w-75 mx-auto font-weight-bold">レビューをみてみましょう</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      </div>
+    </section>
+    <!--数値集計 -->
+    
         <section class="p-index__top3-blogger">
           <div class="container">
             <div class="row">

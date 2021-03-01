@@ -40,18 +40,19 @@
   padding-bottom: 40px;
   width: 100vw;
   margin-left: calc(50% - 50vw);
+
+  &-text{
+    position: relative;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-align: center;
+    text-shadow: 0 2px 2px rgb(0 0 0 / 50%);
+    margin-bottom: 48px;
+    color: aliceblue;
+  }
 }
 
-.ptop-head-text{
-  position: relative;
-  font-size: 36px;
-  font-weight: 400;
-  letter-spacing: 4px;
-  text-align: center;
-  text-shadow: 0 2px 2px rgb(0 0 0 / 50%);
-  margin-bottom: 48px;
-  color: aliceblue;
-}
 
 .card-text{
   color: black;
