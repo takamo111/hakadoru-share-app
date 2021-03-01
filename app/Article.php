@@ -30,7 +30,6 @@ class Article extends Model
         return $this->likes->count();
     }
 
-
     protected $fillable = [
         'title', 'body', 'image_url',
     ];
