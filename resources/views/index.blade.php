@@ -69,49 +69,42 @@
           </div>
         </div>
       </div>
-    </section>
-    <!--数値集計 -->
-    
-        <section class="p-index__top3-blogger">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12 col-12">
-                <div class="text-center">
-                  <h2>レビュー投稿数</h2>
-                </div>
-                <p class="text-center h2-desc"></p>
-              </div>
+      <!--数値集計 -->
+      <div class="row">
+        <div class="col-md-12 mb-6 text-center">
+          <h2>レビュー投稿数</h2>
+          <div class="center-review row col-md-6 mx-auto  mb-3 mt-3" >
+            <div class="col-md-4  col-12">
+              <div class="card-ttl">レビュー総数</div>
+              <p class="w-75 mx-auto">
+                1 
+                <span class="bold2">数</span>
+              </p>
             </div>
-            <div class="row mb-3 mt-3" style="border: 5px solid rgb(214, 223, 229); background-color: rgb(255, 255, 255);">
-              <div class="col-md-4 col-sm-4 col-12">
-                <div style="text-align: center;">
-                  <div class="card-ttl">レビュー総数</div>
-                  <p class="w-75 mx-auto">1 <span class="bold2">数</span></p>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-4 col-12">
-                <div style="text-align: center;">
-                  <div class="card-ttl">本日のレビュー数</div>
-                  <p class="w-75 mx-auto">0 <span class="bold2">数</span></p>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-4 col-12">
-                <div style="text-align: center;">
-                  <div class="card-ttl">今月のレビュー数</div>
-                  <p class="w-75 mx-auto">0 <span class="bold2">数</span></p>
-                </div>
-              </div>
+            <div class="col-md-4  col-12">
+              <div class="card-ttl">本日のレビュー数</div>
+              <p class="w-75 mx-auto">
+                1 
+                <span class="bold2">数</span>
+              </p>
+            </div>
+            <div class="col-md-4  col-12">
+              <div class="card-ttl">今月のレビュー数</div>
+              <p class="w-75 mx-auto">
+                1 
+                <span class="bold2">数</span>
+              </p>
             </div>
           </div>
-        </section>
+        </div>
       </div>
-      <div class="p-index-bottom__image mb-0 pb-0">
-        <p class="p-index--copy">SNSを使用する</p>
-        <div class="p-index__search-form text-center">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div>
-                <div class="card-body card-body-top p-2">
+    </section>
+    <div class="top-foot">
+      <p class="top-foot-text">SNSを使用する</p>
+      <div class="text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+          <div class="card-body card-body-top p-2">
                   <div class="center-block">
                     <p class="text-center text-white font-weight-bold">SNSでログイン</p>
                     <div class="text-center social-btn"> <a href="login/facebook" class="btn-flat-border-facebook my-1">
@@ -120,14 +113,12 @@
                         <i class="fab fa-google"></i>&nbsp; Google</a> </div>
                   </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
-
+  </div>
 </div>
 @endsection
 

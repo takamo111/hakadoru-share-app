@@ -53,6 +53,36 @@
   }
 }
 
+.top-foot{
+  height: 300px;
+  position: relative;
+  background-image: url(/images/background2.jpg);
+  -o-object-fit: cover;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  padding-top: 70px;
+  padding-bottom: 40px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  &-text{
+    position: relative;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-align: center;
+    text-shadow: 0 2px 2px rgb(0 0 0 / 50%);
+    margin-bottom: 48px;
+    color: aliceblue;
+  }
+}
+
+
+
+
+
+
 
 .card-text{
   color: black;
@@ -69,6 +99,11 @@
   left: 2;
   
   }
+
+.center-review {
+  border: 5px solid rgb(214, 223, 229); 
+  background-color: rgb(255, 255, 255);
+}
 
 
 

@@ -11,8 +11,7 @@
 }
 .main {
   background-color: #393e46;
-  min-height: 85vh;
-  padding: 30px 5%;
+  min-height: 100vh;
 }
 .pagetitle {
   color: #fff;
