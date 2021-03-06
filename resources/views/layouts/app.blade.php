@@ -92,7 +92,7 @@
                 </li> 
                 <!-- ドロップダウン -->
                 @auth
-                <li class="nav-item dropdown">
+                <li class="av-item mx-1 underline_effect">
                   <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-user-circle"></i>
                  </a>
