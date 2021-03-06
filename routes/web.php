@@ -13,6 +13,10 @@
 
 Route::get('/', function () {return view('index');});
 
+Route::prefix('login')->name('login.')->group(function () {
+  Route::get('/{provider}', 'Auth\LoginController@redirectToProvider')->name('{provider}');
+});
+
 Auth::routes();
 
 Route::resource('/articles', 'ArticleController')->except(['show'])->middleware('auth'); 

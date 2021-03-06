@@ -6,8 +6,14 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
-
                 <div class="card-body">
+                <div class="form-group row">
+                <div class="col-md-6 col-form-label " >
+                  <a href="{{ route('login.{provider}', ['provider' => 'google']) }}" class="btn btn-block btn-danger">
+                    <i class="fab fa-google mr-1"></i>Googleでログイン
+                  </a>
+                </div>
+                </div>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
