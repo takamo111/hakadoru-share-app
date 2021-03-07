@@ -40,6 +40,7 @@ class SearchController extends Controller
                        'itemName' => $item['itemName'],
                        'itemPrice' => $item['itemPrice'],
                        'itemUrl' => $item['itemUrl'],
+                       'itemCode' => $item['itemCode'],
                        'mediumImageUrls' => $str,
                        'siteIcon' => "../images/rakuten_logo.png",
                    );

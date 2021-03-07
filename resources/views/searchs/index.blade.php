@@ -12,7 +12,7 @@
 <div class="row">
  
 <!--↓↓ 検索フォーム -->
-<div class="col-sm-4" style="padding:20px 0; padding-left:0px;">
+<div class="col-sm-4 mx-auto " style="padding:20px 0;">
 <form class="form-inline" action="{{ route('searchs.index') }}"　method="get">
   <div class="form-group">
   <input type="text" name="keyword"  class="form-control" placeholder="名前を入力してください">
@@ -22,31 +22,28 @@
 </div>
 
     <!-- 商品カード一覧 -->
-    <div class="main_column col-md-10 ">
+    <div class="main_column col-md-11 mx-auto ">
     @if ($items > 0) { 
       <div class="row bg-secondary ">
       @foreach($items as $item)
         
         <!-- 商品カード -->
-          <div class="card m-4 " style="width: 15rem;" >
-          
-            <div class='card-image-main ' >
-              <img class='card-image' src="{{ asset('images/background.jpg') }}" width="100%" height="180"></img>
+          <div class="card col-md-12 my-2 " style="width: 15rem;" >
+            <div class="row">
+              <div class=" col-2 ">
+                <div class='card-image-main ' >
+                  <img class='card-image border' src="{{$item['mediumImageUrls']}} "width="100%" height="180"></img>
+                </div>
+              </div>
+              <div class=" col-10"  >
+                <div class="card-body" style="height: 6rem;">
+                  <h5 class="card-text text-truncate">{{$item['itemName']}}</h5>
+                  <h5 class="card-text text-truncate">￥{{$item['itemPrice']}}</h5>  
+                  <h5 class="card-text text-truncate">商品コード: {{$item['itemCode']}}</h5>  
+                </div>
+              </div>
             </div>
-            <div class="card-body" style="height: 6rem;">
-              <h6 class="card-text text-truncate">{{$item['itemName']}}</h6>
-              <p class="card-text text-truncate">{{$item['mediumImageUrls']}}￥</p>
-              
-            </div>
-            <a class=" border border-primary text-center animated swing infinite  " href=""  style="height: 3rem;">
-              <h5 class="text-primary" > 
-              <i class="fas fa-newspaper mr-1"></i>
-   
-                
-                レビュー詳細</p>
-              </h5>
-            </a>
-</div>
+          </div>
         @endforeach 
       </div>
     } @else{
