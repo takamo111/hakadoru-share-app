@@ -25,8 +25,8 @@ Route::prefix('register')->name('register.')->group(function () {
 
 Auth::routes();
 
-Route::resource('/articles', 'ArticleController')->except(['show'])->middleware('auth'); 
-Route::resource('/articles', 'ArticleController')->only(['show']);
+Route::resource('/articles', 'ArticleController')->except(['show','index'])->middleware('auth'); 
+Route::resource('/articles', 'ArticleController')->only(['show','index']);
 
 Route::resource('/searchs', 'SearchController')->only(['store','index']);
 
