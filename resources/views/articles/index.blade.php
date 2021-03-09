@@ -23,7 +23,7 @@
           <div class="card m-4 " style="width: 15rem;" >
           
             <div class='card-image-main border' >
-              <img class='card-image' src="{{ $article->image_url }}" width="100%" height="180"></img>
+              <img class='card-image' src="{{ $article->r_image_url_a }}" width="100%" height="180"></img>
             <!-- dropdown -->
             @if( Auth::id() === $article->user_id )
               <div class="dropdown">

@@ -13,7 +13,7 @@
  
 <!--↓↓ 検索フォーム -->
 <div class="col-sm-4 mx-auto " style="padding:20px 0;">
-<form class="form-inline" action="{{ route('searchs.index') }}"　method="get">
+<form class="form-inline" action="{{ route('searchs.index') }}" method="get">
   <div class="form-group">
   <input type="text" name="keyword"  class="form-control" placeholder="名前を入力してください">
   </div>

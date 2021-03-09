@@ -26,7 +26,7 @@ class ArticleRequest extends FormRequest
         return [   
             'title' => 'required|max:50',
             'body' => 'required|max:500',
-            'image_url'=>'required|max:800'
+
         ];
     }
     public function attributes()
@@ -34,7 +34,6 @@ class ArticleRequest extends FormRequest
     return [
         'title' => 'タイトル',
         'body' => '本文',
-        'image_url'=>'画像URL'
     ];
 }
 }

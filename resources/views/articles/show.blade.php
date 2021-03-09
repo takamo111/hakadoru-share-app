@@ -19,9 +19,11 @@
                   <div>
                     <h2> {{ $article->title }} </h2>
                   </div>        
-                    <div class="card mb20">
-                      <div class="card-body border">
-                        <div class='image-wrapper'><img class='book-image' src="{{ asset('images/background.jpg') }}"></div>
+                    <div class="card mb20 ">
+                      <div class="card-body border ">
+                        <div class='image-wrapper'><img class='book-image' src="{{ $article->r_image_url_a }}"></div>
+                        <div class='image-wrapper'><img class='book-image' src="{{ $article->r_image_url_b }}"></div>
+                        <div class='image-wrapper'><img class='book-image' src="{{ $article->r_image_url_c }}"></div>
                       </div>
                     </div>
                     <div class="card-body border">
@@ -33,29 +35,29 @@
                       <tr>
                       <td class="row" style=" margin: 0;" >
                         <div class="col-1 font-weight-bold" style="padding: 0;">商品名</div>
-                        <div class="col-11" style="padding: 0;">{{ $article->body }} </div>
+                        <div class="col-11" style="padding: 0;">{{ $article->r_name }} </div>
                       </td>
                       </tr>
                       <td class="row" style=" margin: 0;" >
                         <div class="col-1 font-weight-bold" style="padding: 0;"> 説明</div>
-                        <div class="col-11" style="padding: 0;">{{ $article->title }} </div>
+                        <div class="col-11" style="padding: 0;">{{ $article->r_caption }} </div>
                       </td>
                       </tr>
                       <tr>
                         <td class="row" style=" margin: 0;" >
                           <div class="col-1 font-weight-bold" style="padding: 0;"> URL</div>
-                          <div class="col-11" style="padding: 0;">{{ $article->title }} </div>
+                          <div class="col-11" style="padding: 0;">{{ $article->r_item_url }} </div>
                         </td>
                       <tr>
                         <td class="row" style=" margin: 0;" >
                           <div class="col-1 font-weight-bold" style="padding: 0;"> 価格</div>
-                          <div class="col-11" style="padding: 0;">{{ $article->title }} </div>
+                          <div class="col-11" style="padding: 0;">￥{{ $article->r_price }} </div>
                         </td>
                       </tr>
                       <tr>
                         <td class="row" style=" margin: 0;" >
                           <div class="col-1 font-weight-bold" style="padding: 0;">店舗名</div>
-                          <div class="col-11" style="padding: 0;">{{ $article->title }} </div>
+                          <div class="col-11" style="padding: 0;">{{ $article->r_shop }} </div>
                         </td>
                       </tr>
                     </tbody>
