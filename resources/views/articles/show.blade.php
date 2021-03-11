@@ -86,6 +86,7 @@
     </div>
 
   </div>
+  <comment :article_id="{{$article->id}}" class="mt-5"></comment>
 
 @endsection
 

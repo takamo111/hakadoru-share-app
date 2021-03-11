@@ -18,6 +18,14 @@ class Article extends Model
     {
         return $this->belongsToMany('App\User', 'likes')->withTimestamps();
     }
+
+    public function comments(): hasMany
+    {
+        return $this->hasMany('App\User', 'likes')->withTimestamps();
+    }
+
+
+
     
     public function isLikedBy(?User $user): bool
     {

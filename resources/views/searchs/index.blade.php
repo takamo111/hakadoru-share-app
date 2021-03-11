@@ -10,7 +10,6 @@
 
 <div class="container-fluid">
 <div class="row">
- 
 <!--↓↓ 検索フォーム -->
 <div class="col-sm-4 mx-auto " style="padding:20px 0;">
 <form class="form-inline" action="{{ route('searchs.index') }}" method="get">
