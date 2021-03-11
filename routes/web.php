@@ -13,10 +13,22 @@
 
 Route::get('/', function () {return view('index');});
 
+Route::prefix('login')->name('login.')->group(function () {
+  Route::get('/{provider}', 'Auth\LoginController@redirectToProvider')->name('{provider}');
+  Route::get('/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->name('{provider}.callback');
+  });
+
+Route::prefix('register')->name('register.')->group(function () {
+  Route::get('/{provider}', 'Auth\RegisterController@showProviderUserRegistrationForm')->name('{provider}');
+  Route::post('/{provider}', 'Auth\RegisterController@registerProviderUser')->name('{provider}');
+  });
+
 Auth::routes();
 
-Route::resource('/articles', 'ArticleController')->except(['show'])->middleware('auth'); 
-Route::resource('/articles', 'ArticleController')->only(['show']);
+Route::resource('/articles', 'ArticleController')->except(['show','index'])->middleware('auth'); 
+Route::resource('/articles', 'ArticleController')->only(['show','index']);
+
+Route::resource('/searchs', 'SearchController')->only(['store','index']);
 
 Route::prefix('articles')->name('articles.')->group(function () {
   Route::put('/{article}/like', 'ArticleController@like')->name('like')->middleware('auth');

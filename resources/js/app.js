@@ -5,6 +5,7 @@ import ExampleComponent from './components/ExampleComponent'
 import Tab from './components/Tab'
 import FollowButton from './components/FollowButton'
 
+
 const app = new Vue({
   el: '#app',
   components: {
