@@ -45,7 +45,9 @@
             </div>
           </div>
         @endforeach 
+
       </div>
+      {{ $items->link() }}
     } @else{
       <p>検索結果はありません</p>
 

@@ -68,7 +68,7 @@
                   </div>
                 </div>
                 @endif
-          <!-- modal -->
+            <!-- modal -->
             </div>
             <div class="card-body" style="height: 6rem;">
               <h5 class="card-text text-truncate">{{ $article->title }}</h5>
@@ -83,16 +83,12 @@
                 レビュー詳細</p>
               </h5>
             </a>
-</div>
-        @endforeach 
+          </div>
+        @endforeach   
       </div>
+      {{ $articles->links() }}
     </div>
 </div>
-
-<tab>
-</tab>
-
-
 
 </main>
 

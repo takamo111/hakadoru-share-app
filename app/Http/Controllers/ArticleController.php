@@ -13,7 +13,7 @@ class ArticleController extends Controller
 {
         public function index(Request $request)
         {
-                $articles = Article::all()->sortByDesc('created_at');
+                $articles = Article::paginate(15);
                 return view('articles.index', ['articles' => $articles]);
                 var_dump($articles);
         }

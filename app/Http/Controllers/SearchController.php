@@ -44,7 +44,7 @@ class SearchController extends Controller
                        'mediumImageUrls' => $str,
                        'siteIcon' => "../images/rakuten_logo.png",
                    );
-       
+
                }
                } else {
                    echo 'Error:'.$response->getMessage();
