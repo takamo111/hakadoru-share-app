@@ -87,6 +87,7 @@
 
   </div>
   <comment :article_id="{{$article->id}}" class="mt-5"></comment>
+  <comment-list :article_id="{{$article->id}}" :current_user_id="{{Auth::id()}}" :article_user_id="{{$article->user_id}}" class="mt-5"></comment-list>
 
 @endsection
 
