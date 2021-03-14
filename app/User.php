@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
@@ -53,10 +54,25 @@ class User extends Authenticatable
         return $this->hasMany('App\User', 'likes')->withTimestamps();
     }
 
+    public function articles(): HasMany
+    {
+        return $this->hasMany('App\Article');
+    }
+
     public function isFollowedBy(?User $user): bool
     {
         return $user
             ? (bool)$this->followers->where('id', $user->id)->count()
             : false;
+    }
+
+    public function getCountFollowersAttribute(): int
+    {
+        return $this->followers->count();
+    }
+
+    public function getCountFollowingsAttribute(): int
+    {
+        return $this->followings->count();
     }
 }

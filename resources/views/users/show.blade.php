@@ -31,13 +31,62 @@
       <div class="card-body">
         <div class="card-text">
           <a href="" class="text-muted">
-            10 フォロー
+          {{ $user->count_followings }} フォロー 
           </a>
           <a href="" class="text-muted">
-            10 フォロワー
+          {{ $user->count_followers }} フォロワー
           </a>
         </div>
       </div>
+    </div>
+
+    <ul class="nav nav-tabs nav-justified mt-3">
+      <li class="nav-item">
+        <a class="nav-link text-muted active"
+           href="{{ route('users.show', ['name' => $user->name]) }}">
+          記事
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-muted"
+           href="">
+          いいね
+        </a>
+      </li>
+    </ul>
+    <div class="row">
+        <div class="main_column col-12 ">
+              <!-- タブ -->
+            <!-- 商品カード一覧 -->
+          <div class="main_column col-md-12 ">
+            <div class="row bg-secondary ">
+              @foreach($articles as $article)
+
+              <!-- 商品カード -->
+                <div class="card m-4 " style="width: 15rem;" >
+                
+                  <div class='card-image-main border' >
+                  <img class='card-image' src="{{ $article->r_image_url_a }}" width="100%" height="180"></img>
+
+                  </div>
+                  <div class="card-body" style="height: 6rem;">
+                    <h5 class="card-text text-truncate">{{ $article->title }}</h5>
+                    <p class="card-text text-truncate">{{ $article->body }}</p>
+                    
+                  </div>
+                  <a class=" border border-primary text-center animated swing infinite  " href="{{ route('articles.show', ['article' => $article]) }}"  style="height: 3rem;">
+                    <h5 class="text-primary" > 
+                    <i class="fas fa-newspaper mr-1"></i>               
+                      レビュー詳細</p>
+                    </h5>
+                  </a>
+                </div>
+              @endforeach   
+            </div>
+            
+
+          </div>  
+        </div>       
     </div>
   </div>
 @endsection
