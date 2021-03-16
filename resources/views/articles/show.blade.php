@@ -69,13 +69,14 @@
                     endpoint="{{ route('articles.like', ['article' => $article]) }}"
                   >
                   </article-like>
+                  <example></example>
                   <p>投稿日：{{ $article->created_at->format('Y年m月d日') }}</p>
                   <a href="" class="btn-flat-border my-2">戻る</a>
 
                   <div class="card-body pt-0 pb-2 pl-3">
                   <div class="card-text">
 
-  <example></example>
+
     </div>
   </div>
                 </div>

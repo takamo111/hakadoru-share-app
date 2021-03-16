@@ -12,10 +12,6 @@ export default {
       msg: 'Welcome to My Vuex Sample',
     };
   },
-    computed: {
-    msg() {
-      return this.$store.state.msg;
-    },
-    },
+
 };
 </script>
