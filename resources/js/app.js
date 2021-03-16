@@ -17,7 +17,7 @@ const app = new Vue({
     Example,
     FollowButton,
 
-    Store
+  
   }
 })
 

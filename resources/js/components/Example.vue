@@ -9,7 +9,7 @@ export default {
   name: 'sample',
   data() {
     return {
-
+      msg: 'Welcome to My Vuex Sample',
     };
   },
     computed: {

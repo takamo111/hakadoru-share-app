@@ -46,7 +46,7 @@
                       <tr>
                         <td class="row" style=" margin: 0;" >
                           <div class="col-1 font-weight-bold" style="padding: 0;"> URL</div>
-                          <div class="col-11" style="padding: 0;">{{ $article->r_item_url }} </div>
+                          <a  class="col-11" style="padding: 0;" href="{{ $article->r_item_url }}">{{ $article->r_item_url }}</a>
                         </td>
                       <tr>
                         <td class="row" style=" margin: 0;" >
@@ -74,6 +74,8 @@
 
                   <div class="card-body pt-0 pb-2 pl-3">
                   <div class="card-text">
+
+  <example></example>
     </div>
   </div>
                 </div>
@@ -86,7 +88,6 @@
     </div>
 
   </div>
-  
 
 @endsection
 
