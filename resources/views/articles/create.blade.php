@@ -27,7 +27,7 @@
               </div>
               <div class="form-group">
               <label>レビュー本文</label>
-                <textarea class='description form-control' name='body' placeholder='本文を入力'></textarea>
+                <textarea class='description form-control' rows="5"  name='body' placeholder='本文を入力'></textarea>
               </div>
               <div class="form-group">
                 <label>商品コード</label>
