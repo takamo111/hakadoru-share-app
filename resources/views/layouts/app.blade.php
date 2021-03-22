@@ -11,7 +11,7 @@
       <title>{{ config('app.name', 'Hakadoru') }}</title>
 
       <!-- Scripts -->
-
+      <script src="{{ asset('js/app.js') }}" defer></script>
       
       <!-- Fonts -->
       <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -22,7 +22,7 @@
       <link href="{{ mix('css/app.css') }}" rel="stylesheet">
       <link href="{{ asset('css/layout.css') }}" rel="stylesheet">
       <link href="{{ asset('css/utility.css') }}" rel="stylesheet">
-      <script src="{{ asset('js/app.js') }}" defer></script>
+
       
       @yield('css')
     </head>
@@ -123,6 +123,7 @@
         </footer>
       </div>
 
+      <script src="{{ mix('js/app.js') }}"></script>
 
       <!-- JQuery -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

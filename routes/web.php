@@ -45,7 +45,4 @@ Route::prefix('users')->name('users.')->group(function () {
 });
 });
 
-Route::get('/articles/{article}/get_comments', 'CommentController@get_comments')->name('get_comments');
-Route::resource('articles.comments', 'CommentController', [
- 'only' => ['store', 'update', 'destroy'],
-]);
+Route::resource('comment', 'CommentController')->only(['store']);

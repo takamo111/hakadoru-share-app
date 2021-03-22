@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\User;
 
+use Illuminate\Support\Facades\Auth;
+
 class UserController extends Controller
 {
     public function show(string $name)
@@ -31,6 +33,10 @@ class UserController extends Controller
         ]);
     }
 
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
 
     public function follow(Request $request, string $name)
     {

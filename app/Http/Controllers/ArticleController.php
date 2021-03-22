@@ -6,8 +6,12 @@ use App\Http\Requests\ArticleRequest;
 use Illuminate\Http\Request;
 
 use App\Article;
+use App\Comment;
+use App\User;
 
 use RakutenRws_Client;
+
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -107,7 +111,7 @@ class ArticleController extends Controller
         }
 
         
-        public function show(Article $article)
+        public function show(Article $article, Comment $comment)
         {
             return view('articles.show', ['article' => $article]);
         }  

@@ -19,9 +19,9 @@ class Article extends Model
         return $this->belongsToMany('App\User', 'likes')->withTimestamps();
     }
 
-    public function comments(): hasMany
+    public function comments()
     {
-        return $this->hasMany('App\User', 'likes')->withTimestamps();
+      return $this->hasMany('App\Comment');
     }
 
 

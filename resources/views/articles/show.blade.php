@@ -85,32 +85,30 @@
           <h3 class="card-header">
             <div class="comment">コメント</div>
           </h3>
-          <form method='POST' action="{{ route('articles.store') }}" enctype="multipart/form-data">
+          <form method='POST' action="{{ route('comment.store') }}" enctype="multipart/form-data">
         @csrf
         <div class="card">
             <div class="card-body">
             <div class="form-group">
 
               <div class="form-group">
-                <textarea class='description form-control' rows="6" name='body' placeholder='コメントを入力'></textarea>
+                <textarea class='description form-control' rows="6" name='text' placeholder='コメントを入力'></textarea>
               </div>
               <div class="form-group">
-          
+              <input value="{{ Auth::user()->id }}" type="hidden" name="user_id" />
+              <input value="{{ $article->id }}" type="hidden" name="article_id" />
               <input type='submit' class='btn btn-primary' value='コメントする'>
             </div>
         </div>
       </form>
-
-            <div class="table border-top border-dark p-2">
-              <a class="font-weight-bold text-dark " href="{{ route('users.show', ['name' => $article->user->name]) }}">投稿者：{{ $article->user->name }}</a>
-              <div class="article-name">{{ $article->r_name }} </div>
-              <p class="py-1">投稿日：{{ $article->created_at->format('Y年m月d日') }}</p>
+   
+            @foreach ($article->comments as $comment) 
+            <div class="table border-top border-dark pt-3">
+            <a class="font-weight-bold text-dark" href="/users/{{ $comment->user->name }}">投稿者：{{ $comment->user->name }}</a>
+              <div class="article-name py-2">{{ $comment->text }}</div>
+              <p class="">投稿日：{{ $comment->created_at->format('Y年m月d日') }}</p>
             </div>
-            <div class="table border-top border-dark p-2">
-              <a class="font-weight-bold text-dark " href="{{ route('users.show', ['name' => $article->user->name]) }}">投稿者：{{ $article->user->name }}</a>
-              <div class="article-name">{{ $article->r_name }} </div>
-              <p class="py-1">投稿日：{{ $article->created_at->format('Y年m月d日') }}</p>
-            </div>
+            @endforeach
 
 
             </div>
@@ -119,6 +117,8 @@
       </div>
     </div> 
   </div>
+
+
 </div>
 
 
