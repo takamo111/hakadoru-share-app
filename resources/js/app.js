@@ -1,7 +1,5 @@
 import './bootstrap'
-
 import Vue from 'vue'
-
 import ArticleLike from './components/ArticleLike'
 import Tab from './components/Tab'
 import FollowButton from './components/FollowButton'
