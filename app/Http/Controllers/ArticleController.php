@@ -17,7 +17,7 @@ class ArticleController extends Controller
 {
         public function index(Request $request)
         {
-                $articles = Article::paginate(15);
+                $articles = Article::paginate(2);
                 return view('articles.index', ['articles' => $articles]);
                 var_dump($articles);
         }

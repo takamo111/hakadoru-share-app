@@ -26,57 +26,72 @@
           <div id="home" class="main_column col-md-12 tab-pane active ">
             <div class="row bg-secondary ">
               @foreach($articles as $article)
-              
-              <!-- 商品カード -->
-              <div class="card m-4 " style="width: 15rem;" >
-              
-                <div class='card-image-main border' >
-                  <img class='card-image' src="{{ $article->r_image_url_a }}" width="100%" height="180"></img>
-                  <!-- dropdown -->
-                  @include('articles.dropdown')
-                  <!-- dropdown -->
-
-                </div>
-                <div class="card-body" style="height: 6rem;">
-                  <h5 class="card-text text-truncate">{{ $article->title }}</h5>
-                  <p class="card-text text-truncate">{{ $article->body }}</p>
-                  
-                </div>
-                <a class=" border border-primary text-center animated swing infinite  " href="{{ route('articles.show', ['article' => $article]) }}"  style="height: 3rem;">
-                  <h5 class="text-primary" > 
-                  <i class="fas fa-newspaper mr-1"></i>
-      
-                    
-                    レビュー詳細</p>
-                  </h5>
-                </a>
-              </div>
-              @endforeach   
+                @if ($article->genre_id === 1)        
+                @include('articles.card')
+              @endif
             </div>
             {{ $articles->links() }}
-          </div>  
-          <div id="gadget" class="tab-pane">
-            <p>ガジェット</p>  <!-- タブの内容 -->
+          </div> 
+          <div id="gadget" class="main_column col-md-12 tab-pane tab-pane">
+            <div class="row bg-secondary ">
+                @if ($article->genre_id === 2)        
+                @include('articles.card')
+              @endif
+            </div>
+            {{ $articles->links() }}
+          </div> 
+
+          <div id="cooking" class="main_column col-md-12 tab-pane tab-pane">
+            <div class="row bg-secondary ">
+              @if ($article->genre_id === 3)        
+                @include('articles.card')
+              @endif
+            </div>
+            {{ $articles->links() }}
           </div>
-          <div id="cooking" class="tab-pane">
-            <p>食事</p>  <!-- タブの内容 -->
+          <div id="life" class="main_column col-md-12 tab-pane tab-pane">
+            <div class="row bg-secondary ">
+              @if ($article->genre_id === 4)        
+                @include('articles.card')
+              @endif
+            </div>
+            {{ $articles->links() }}
           </div>
-          <div id="life" class="tab-pane">
-            <p>生活雑貨</p>  <!-- タブの内容 -->
-          </div>
-          <div id="fashion" class="tab-pane">
-            <p>ファション</p>  <!-- タブの内容 -->
+          <div id="fashion" class="main_column col-md-12 tab-pane tab-pane">
+            <div class="row bg-secondary ">
+              @if ($article->genre_id === 5)        
+                @include('articles.card')
+              @endif
+            </div>
+            {{ $articles->links() }}
           </div>
           <div id="interior" class="tab-pane">
-            <p>インテリア</p>  <!-- タブの内容 -->
+            <div class="row bg-secondary ">
+              @if ($article->genre_id === 6)        
+                @include('articles.card')
+              @endif
+            </div>
+            {{ $articles->links() }}
           </div>
           <div id="book" class="tab-pane">
-            <p>書籍</p>  <!-- タブの内容 -->
+            <div class="row bg-secondary ">
+              @if ($article->genre_id === 7)        
+                @include('articles.card')
+              @endif
+            </div>
+            {{ $articles->links() }}
           </div>
           <div id="another" class="tab-pane">
-            <p>その他</p>  <!-- タブの内容 -->
+            <div class="row bg-secondary ">
+              @if ($article->genre_id === 8)        
+                @include('articles.card')
+              @endif
+            </div>
+            {{ $articles->links() }}
           </div>
+          @endforeach
         </div>
+
       </div>
 
 
