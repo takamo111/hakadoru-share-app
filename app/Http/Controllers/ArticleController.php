@@ -21,14 +21,13 @@ class ArticleController extends Controller
             $number = $request->number;
             $query = Article::query();
             $query->where('genre_id', $number); 
-            $articles = $query->get();
+            $articles = $query->paginate(1);
             }
             else{
             $articles = Article::paginate(15);
             }
                 return view('articles.index', ['articles' => $articles]);
                 var_dump($articles);
-                //ページねーとができない
 
         }
 

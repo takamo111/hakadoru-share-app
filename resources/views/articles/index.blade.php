@@ -53,7 +53,7 @@
               </div>
               @endforeach   
             </div>
-      
+            {{ $articles->appends(request()->input())->links()  }}
           </div>  
           <div id="gadget" class="tab-pane">
             <p>ガジェット</p>  <!-- タブの内容 -->
