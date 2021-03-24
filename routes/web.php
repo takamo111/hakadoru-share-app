@@ -27,6 +27,7 @@ Auth::routes();
 
 Route::resource('/articles', 'ArticleController')->except(['show','index'])->middleware('auth'); 
 Route::resource('/articles', 'ArticleController')->only(['show','index']);
+Route::get('/articles/{genre_id}', 'ArticleController@genre')->name('articles.genre');
 
 Route::resource('/searchs', 'SearchController')->only(['store','index']);
 

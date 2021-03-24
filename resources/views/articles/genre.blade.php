@@ -42,7 +42,7 @@
                   <p class="card-text text-truncate">{{ $article->body }}</p>
                   
                 </div>
-                <a class=" border border-primary text-center animated swing infinite  " href="{{ route('articles.show', ['article' => $article]) }}"  style="height: 3rem;">
+                <a class=" border border-primary text-center animated swing infinite  " href="{{ route('articles.genre'}}"  style="height: 3rem;">
                   <h5 class="text-primary" > 
                   <i class="fas fa-newspaper mr-1"></i>
       
@@ -53,7 +53,7 @@
               </div>
               @endforeach   
             </div>
-      
+            {{ $articles->links() }}
           </div>  
           <div id="gadget" class="tab-pane">
             <p>ガジェット</p>  <!-- タブの内容 -->

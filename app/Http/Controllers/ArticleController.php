@@ -17,9 +17,26 @@ class ArticleController extends Controller
 {
         public function index(Request $request)
         {
-                $articles = Article::paginate(2);
+            if (isset( $request->number )) {
+            $number = $request->number;
+            $query = Article::query();
+            $query->where('genre_id', $number); 
+            $articles = $query->get();
+            }
+            else{
+            $articles = Article::paginate(15);
+            }
                 return view('articles.index', ['articles' => $articles]);
                 var_dump($articles);
+                //ページねーとができない
+
+        }
+
+        public function genre(Request $request)
+        {
+            $articles = Article::where('genre_id', '1')->first();
+    
+            return view('articles.genre', ['articles' => $articles]);
         }
 
 

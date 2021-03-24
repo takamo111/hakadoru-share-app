@@ -81,7 +81,7 @@
                 </li>
                   
                 <li class="nav-item mx-1 underline_effect">
-                  <a href="{{ route('articles.index') }}" class="nav-link text-center p-0 text-white">
+                  <a href=" /articles?number=1" class="nav-link text-center p-0 text-white">
                     <i class="fas fa-comment fa-lg"></i> 
                     <span class="text-center d-block" style="font-size: 10px;">レビューを見る</span>
                   </a>
