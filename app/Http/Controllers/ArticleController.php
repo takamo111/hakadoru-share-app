@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ArticleRequest;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 use App\Article;
 use App\Comment;
@@ -26,6 +27,8 @@ class ArticleController extends Controller
             else{
             $articles = Article::paginate(15);
             }
+            $carbon_obj = new Carbon('2019-03-11');
+
                 return view('articles.index', ['articles' => $articles]);
                 var_dump($articles);
 

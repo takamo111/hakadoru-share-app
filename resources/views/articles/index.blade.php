@@ -11,7 +11,7 @@
     <div class="row">
       <div class="main_column col-9 ">
         <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               カテゴリ選択
           </button>
           <div class="dropdown-menu">
@@ -19,11 +19,11 @@
               <a class="dropdown-item" href="/articles?number=1">家電</a>
               <a class="dropdown-item" href="/articles?number=2">電子機器</a>
               <a class="dropdown-item" href="/articles?number=3">生活雑貨</a>
-              <a class="dropdown-item" href="/articles?number=3">食事</a>
-              <a class="dropdown-item" href="/articles?number=3">ファッション</a>
-              <a class="dropdown-item" href="/articles?number=4">インテリア</a>
-              <a class="dropdown-item" href="/articles?number=3">書籍</a>
-              <a class="dropdown-item" href="/articles?number=3">その他</a>
+              <a class="dropdown-item" href="/articles?number=4">食事</a>
+              <a class="dropdown-item" href="/articles?number=5">ファッション</a>
+              <a class="dropdown-item" href="/articles?number=6">インテリア</a>
+              <a class="dropdown-item" href="/articles?number=7">書籍</a>
+              <a class="dropdown-item" href="/articles?number=8">その他</a>
           </div>
         </div>
 
@@ -61,27 +61,6 @@
             </div>
             {{ $articles->appends(request()->input())->links()  }}
           </div>  
-          <div id="gadget" class="tab-pane">
-            <p>ガジェット</p>  <!-- タブの内容 -->
-          </div>
-          <div id="cooking" class="tab-pane">
-            <p>食事</p>  <!-- タブの内容 -->
-          </div>
-          <div id="life" class="tab-pane">
-            <p>生活雑貨</p>  <!-- タブの内容 -->
-          </div>
-          <div id="fashion" class="tab-pane">
-            <p>ファション</p>  <!-- タブの内容 -->
-          </div>
-          <div id="interior" class="tab-pane">
-            <p>インテリア</p>  <!-- タブの内容 -->
-          </div>
-          <div id="book" class="tab-pane">
-            <p>書籍</p>  <!-- タブの内容 -->
-          </div>
-          <div id="another" class="tab-pane">
-            <p>その他</p>  <!-- タブの内容 -->
-          </div>
         </div>
       </div>
 
@@ -128,7 +107,7 @@
                 <tbody>
                     <tr>
                       <td style="width: 75%; border-top: none;">今日</td> 
-                      <td class="font-weight-bold" style="border-top: none;">0</td>
+                      <td class="font-weight-bold" style="border-top: none;">{{ Carbon\Carbon::now('Asia/Tokyo')->toDateTimeString() }}</td>
                     </tr> 
                     <tr>
                       <td>今月</td> 
@@ -136,7 +115,7 @@
                     </tr> 
                     <tr>
                       <td>総数</td> 
-                      <td class="font-weight-bold">12</td>
+                      <td class="font-weight-bold">{{ \App\Article::count() }}</td>
                     </tr>
                 </tbody>
               </table>

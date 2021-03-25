@@ -14,6 +14,7 @@
         "laravel/socialite": "^5.2",
         "laravel/tinker": "^1.0",
         "laravel/ui": "^1.2",
+        "nesbot/carbon": "^2.46",
         "rakuten-ws/rws-php-sdk": "^1.1"
     },
     "require-dev": {
