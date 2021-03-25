@@ -10,17 +10,23 @@
   <div id="contentsBody" >
     <div class="row">
       <div class="main_column col-9 ">
-            <!-- タブ -->
-        <ul id="myTabs" class="nav nav-tabs ">
-          <li role="presentation" class="active"><a href="#home"  aria-controls="home" role="tab" data-toggle="tab" class="nav-link active">家電</a></li>
-          <li role="presentation"><a href="#gadget" aria-controls="gadget" role="tab" data-toggle="tab" class="nav-link">ガジェット</a></li>
-          <li role="presentation"><a href="#cooking" aria-controls="cooking" role="tab" data-toggle="tab" class="nav-link">食事</a></li>
-          <li role="presentation"><a href="#life"  aria-controls="life" role="tab" data-toggle="tab" class="nav-link active">生活雑貨</a></li>
-          <li role="presentation"><a href="#fashion" aria-controls="fashion" role="tab" data-toggle="tab" class="nav-link">ファッション</a></li>
-          <li role="presentation"><a href="#interior" aria-controls="interior" role="tab" data-toggle="tab" class="nav-link">インテリア</a></li>
-          <li role="presentation"><a href="#book" aria-controls="book" role="tab" data-toggle="tab" class="nav-link">書籍</a></li>
-          <li role="presentation"><a href="#another" aria-controls="another" role="tab" data-toggle="tab" class="nav-link">その他</a></li>
-        </ul>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              カテゴリ選択
+          </button>
+          <div class="dropdown-menu">
+          <a class="dropdown-item" href=" /articles">全てのカテゴリ</a>
+              <a class="dropdown-item" href="/articles?number=1">家電</a>
+              <a class="dropdown-item" href="/articles?number=2">電子機器</a>
+              <a class="dropdown-item" href="/articles?number=3">生活雑貨</a>
+              <a class="dropdown-item" href="/articles?number=3">食事</a>
+              <a class="dropdown-item" href="/articles?number=3">ファッション</a>
+              <a class="dropdown-item" href="/articles?number=4">インテリア</a>
+              <a class="dropdown-item" href="/articles?number=3">書籍</a>
+              <a class="dropdown-item" href="/articles?number=3">その他</a>
+          </div>
+        </div>
+
           <!-- 商品カード一覧 -->
         <div class="tab-content">
           <div id="home" class="main_column col-md-12 tab-pane active ">
