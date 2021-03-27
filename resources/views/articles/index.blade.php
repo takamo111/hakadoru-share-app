@@ -107,11 +107,11 @@
                 <tbody>
                     <tr>
                       <td style="width: 75%; border-top: none;">今日</td> 
-                      <td class="font-weight-bold" style="border-top: none;">{{ Carbon\Carbon::now('Asia/Tokyo')->toDateTimeString() }}</td>
+                      <td class="font-weight-bold" style="border-top: none;">{{$d_reports}}</td>
                     </tr> 
                     <tr>
                       <td>今月</td> 
-                      <td class="font-weight-bold">1</td>
+                      <td class="font-weight-bold">{{$m_reports}}</td>
                     </tr> 
                     <tr>
                       <td>総数</td> 

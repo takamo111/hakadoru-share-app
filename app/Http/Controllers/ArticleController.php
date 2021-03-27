@@ -27,9 +27,12 @@ class ArticleController extends Controller
             else{
             $articles = Article::paginate(15);
             }
-            $carbon_obj = new Carbon('2019-03-11');
 
-                return view('articles.index', ['articles' => $articles]);
+        $m_reports = Article::whereBetween('articles.created_at', [now()->startOfMonth()->format('Y-m-d'), now()->endOfMonth()->format('Y-m-d')])->count();
+        $d_reports = Article::whereBetween('articles.created_at', [now()->startOfDay()->format('Y-m-d'), now()->endOfDay()->format('Y-m-d')])->count();
+
+
+                return view('articles.index', ['articles' => $articles,'m_reports' =>$m_reports,'d_reports' =>$d_reports]);
                 var_dump($articles);
 
         }
