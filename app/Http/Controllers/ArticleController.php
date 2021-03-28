@@ -22,17 +22,17 @@ class ArticleController extends Controller
             $number = $request->number;
             $query = Article::query();
             $query->where('genre_id', $number); 
-            $articles = $query->paginate(1);
+            $articles = $query->paginate(15);
             }
             else{
             $articles = Article::paginate(15);
             }
 
             $m_reports = Article::whereBetween('articles.created_at', [now()->startOfMonth()->format('Y-m-d'), now()->endOfMonth()->format('Y-m-d')])->count();
-            $d_reports = Article::whereBetween('articles.created_at', [now()->startOfDay()->format('Y-m-d'), now()->endOfDay()->format('Y-m-d')])->count();
+            $w_reports = Article::whereBetween('articles.created_at', [now()->startOfWeek()->format('Y-m-d'), now()->endOfWeek()->format('Y-m-d')])->count();
 
 
-                return view('articles.index', ['articles' => $articles,'m_reports' =>$m_reports,'d_reports' =>$d_reports]);
+                return view('articles.index', ['articles' => $articles,'m_reports' =>$m_reports,'w_reports' =>$w_reports]);
                 var_dump($articles);
 
         }
@@ -91,9 +91,14 @@ class ArticleController extends Controller
             if ($response->isOk()) {
             $items = array();
             foreach ($response as $item){
+
                 $article->r_image_url_a = str_replace("_ex=128x128", "_ex=175x175", $item['mediumImageUrls'][0]['imageUrl']);
+                if(isset($item['mediumImageUrls'][1]['imageUrl'])){
                 $article->r_image_url_b = str_replace("_ex=128x128", "_ex=175x175", $item['mediumImageUrls'][1]['imageUrl']);
+                }
+                if(isset($item['mediumImageUrls'][2]['imageUrl'])){
                 $article->r_image_url_c = str_replace("_ex=128x128", "_ex=175x175", $item['mediumImageUrls'][2]['imageUrl']);
+                }
                 $article->r_name = $item['itemName'];
                 $article->r_caption = $item['itemCaption'];
                 $article->r_item_url = $item['itemUrl'];

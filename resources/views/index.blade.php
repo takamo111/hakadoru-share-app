@@ -15,15 +15,12 @@
           <div class="row justify-content-center">
             <div>
               <div class="card-body card-body-top p-2">
-                <form action="/shop/search" method="get" class="form-inline"> <input type="hidden" name="_token" value="">
-                  <div class="d-flex">
-                    <div class="form-group"> <select lang="ja" id="pref_id" name="pref_id" class="form-areaPrefInfo form-control"><option value="13"></select></div>
-                    <div class="form-group ml-2"><input type="text" name="keyword" id="keyword" placeholder="amazon.com" class="form-control" style="width: 180px;"></div>
-                      <button class="btn-flat-border ml-2 col-xs-1 "><i class="fa fa-search"></i>
-                      </button> 
-                    </div>
-                  </div>
-                </form>
+              <form class="form-inline" action="{{ route('searchs.index') }}" method="get">
+                <div class="form-group">
+                <input type="text" name="keyword"  class="form-control" style="width:250px;" placeholder="商品名または商品コード入力">
+                </div>
+                <input type="submit" value="検索" class="btn btn-info">
+              </form>
               </div>
             </div>
           </div>

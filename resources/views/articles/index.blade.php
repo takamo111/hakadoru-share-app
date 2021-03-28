@@ -73,19 +73,19 @@
             </div>
             <h5 class="text-center font-weight-bold">STEP1 ユーザー登録</h5>
             <div class="text-center my-1"> 
-              <a href="{{route('articles.create')}}" class="btn btn-danger btn">
-              <i class="fa fa-edit mr-2"></i>
-                投稿する
+              <a href="{{ route('register') }}" class="btn btn-danger btn">
+              <i class="fa fa-user-plus mr-2"></i>
+                新規登録
               </a>
             </div>
-            <h5 class="text-center font-weight-bold mt-4">STEP2 商品検索(商品ID取得)</h5>
+            <h5 class="text-center font-weight-bold mt-4">STEP2 商品検索</h5>
             <div class="text-center mt-1"> 
-              <a href="{{route('articles.create')}}" class="btn btn-danger ">
-              <i class="fa fa-edit mr-2"></i>
-                投稿する
+              <a href="route('searchs.index')" class="btn btn-danger ">
+              <i class="fa fa-search mr-2"></i>
+                商品検索
               </a>
             </div>
-            <h5 class="text-center font-weight-bold my-4">STEP3 投稿する </h5>
+            <h5 class="text-center font-weight-bold mt-4">STEP3 投稿する </h5>
             <div class="text-center mt-1"> 
               <a href="{{route('articles.create')}}" class="btn btn-danger">
               <i class="fa fa-edit mr-2"></i>
@@ -104,8 +104,8 @@
               <table class="table">
                 <tbody>
                     <tr>
-                      <td style="width: 75%; border-top: none;">今日</td> 
-                      <td class="font-weight-bold" style="border-top: none;">{{$d_reports}}</td>
+                      <td style="width: 75%; border-top: none;">今週</td> 
+                      <td class="font-weight-bold" style="border-top: none;">{{$w_reports}}</td>
                     </tr> 
                     <tr>
                       <td>今月</td> 

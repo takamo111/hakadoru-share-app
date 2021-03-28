@@ -71,10 +71,10 @@
                         </div>
                     </form>
                     <div class="form-group row">
+                    <div class="col-md-8 col-form-label mx-auto mt-5 " >
                     <a href="{{ route('login.{provider}', ['provider' => 'google']) }}" class="btn btn-block btn-danger">
                       <i class="fab fa-google mr-1"></i>Googleで登録
                     </a>
-                    <div class="col-md-8 col-form-label mx-auto mt-5 " >
                 </div>
             </div>
         </div>

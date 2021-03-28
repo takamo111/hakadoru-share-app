@@ -22,54 +22,39 @@
 
     <!-- 商品カード一覧 -->
     <div class="main_column col-md-11 mx-auto ">
-    @if ($items > 0)  
+    @if($items > 0)  
       <div class="row bg-secondary ">
-      @foreach($items as $item)
-        
+      @foreach($items as $item)      
         <!-- 商品カード -->
-          <div class="card col-md-12 my-2 " style="width: 15rem;" >
-            <div class="row">
-              <div class=" col-2 ">
-                <div class='card-image-main ' >
-                  <img class='card-image border' src="{{$item['mediumImageUrls']}} "width="100%" height="180"></img>
-                </div>
+        <div class="card col-md-12 my-2" style="width: 15rem;" >
+          <div class="row">
+            <div class=" col-2 ">
+              <div class='card-image-main ' >
+                <img class='card-image border' src="{{$item['mediumImageUrls']}} "width="100%" height="180"></img>
               </div>
-              <div class=" col-10"  >
-                <div class="card-body" style="height: 6rem;">
-                  <h5 class="card-text text-truncate">{{$item['itemName']}}</h5>
-                  <h5 class="card-text text-truncate">￥{{$item['itemPrice']}}</h5>  
-                  <h5 class="card-text text-truncate">商品コード: {{$item['itemCode']}}</h5>  
-                  <a class="btn btn-primary m-3" href="/searchs/detail?code={{$item['itemCode']}}"> 
-                  <i class="fas fa-newspaper  mr-2"></i>
-                  詳細を見る
-                  </a>
-                  <a class="btn btn-danger m-3" href="/articles/create?code={{$item['itemCode']}}"> 
-                  <i class="fa fa-edit mr-2"></i>
-                  投稿する
-                  </a>
-                </div>
+            </div>
+            <div class=" col-10"  >
+              <div class="card-body" style="height: 6rem;">
+                <h5 class="card-text text-truncate">{{$item['itemName']}}</h5>
+                <h5 class="card-text text-truncate">￥{{$item['itemPrice']}}</h5>  
+                <h5 class="card-text text-truncate">商品コード: {{$item['itemCode']}}</h5>  
+                <a class="btn btn-primary m-3" href="/searchs/detail?code={{$item['itemCode']}}"> 
+                <i class="fas fa-newspaper  mr-2"></i>
+                詳細を見る
+                </a>
+                <a class="btn btn-danger m-3" href="/articles/create?code={{$item['itemCode']}}"> 
+                <i class="fa fa-edit mr-2"></i>
+                この商品で投稿する
+                </a>
               </div>
             </div>
           </div>
+        </div>
         @endforeach 
-      </div>
-    
-    @else
-      <div>検索結果はありません</div>
-
-    
+      </div> 
     @endif
     </div>
-
 </div>
-
-
-
 </main>
-
-
-
-
-
 @endsection
 
