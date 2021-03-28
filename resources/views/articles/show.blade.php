@@ -22,8 +22,12 @@
               <div class="card mb20 ">
                 <div class="card-body border ">
                   <div class='image-wrapper'><img class='book-image' src="{{ $article->r_image_url_a }}"></div>
+                  @isset($article->r_image_url_b)
                   <div class='image-wrapper'><img class='book-image' src="{{ $article->r_image_url_b }}"></div>
+                  @endisset
+                  @isset($article->r_image_url_c)
                   <div class='image-wrapper'><img class='book-image' src="{{ $article->r_image_url_c }}"></div>
+                  @endisset
                 </div>
               </div>
               <div class="card-body border">
@@ -74,11 +78,6 @@
         </div>
       </div>
     </div>
-  
-
-
-
-
     <div class="row justify-content-center">
       <div class="col-md-10 mt-3">
         <div class="card">

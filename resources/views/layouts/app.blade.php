@@ -46,15 +46,15 @@
                   </a>
                 </li>              
                 <li class="nav-item mx-1 underline_effect">
-                  <a href="{{ route('articles.index') }}" class="nav-link text-center p-0 text-white">
+                  <a href=" /articles" class="nav-link text-center p-0 text-white">
                   <i class="fas fa-comment fa-lg"></i> 
                     <span class="text-center d-block" style="font-size: 10px;">レビューを見る</span>
                   </a>
                 </li> 
-                <li class="nav-item mx-1 underline_effect">
-                  <a href="{{route('articles.create')}}" class="nav-link text-center p-0 text-white">
-                    <i class="fa fa-edit fa-lg"></i> 
-                    <span class="text-center d-block" style="font-size: 10px;">レビューを投稿</span>
+                  <li class="nav-item mx-1 underline_effect">
+                  <a href="{{route('searchs.index')}}" class="nav-link text-center p-0 text-white">
+                    <i class="fa fa-search fa-lg"></i> 
+                    <span class="text-center d-block" style="font-size: 10px;">商品検索</span>
                   </a>
                 </li> 
                 @if (Route::has('register'))
@@ -81,7 +81,7 @@
                 </li>
                   
                 <li class="nav-item mx-1 underline_effect">
-                  <a href=" /articles?number=1" class="nav-link text-center p-0 text-white">
+                  <a href=" /articles" class="nav-link text-center p-0 text-white">
                     <i class="fas fa-comment fa-lg"></i> 
                     <span class="text-center d-block" style="font-size: 10px;">レビューを見る</span>
                   </a>
@@ -92,6 +92,11 @@
                     <span class="text-center d-block" style="font-size: 10px;">レビューを投稿</span>
                   </a>
                 </li> 
+                <li class="nav-item mx-1 underline_effect">
+                  <a href="{{route('searchs.index')}}" class="nav-link text-center p-0 text-white">
+                    <i class="fa fa-search fa-lg"></i> 
+                    <span class="text-center d-block" style="font-size: 10px;">商品検索</span>
+                  </a>
                 <!-- ドロップダウン -->
                 @auth
                 <li class="av-item mx-1 underline_effect">

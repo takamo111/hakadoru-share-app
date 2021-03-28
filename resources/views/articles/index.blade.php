@@ -50,9 +50,7 @@
                 </div>
                 <a class=" border border-primary text-center animated swing infinite  " href="{{ route('articles.show', ['article' => $article]) }}"  style="height: 3rem;">
                   <h5 class="text-primary" > 
-                  <i class="fas fa-newspaper mr-1"></i>
-      
-                    
+                  <i class="fas fa-newspaper mr-1"></i>         
                     レビュー詳細</p>
                   </h5>
                 </a>

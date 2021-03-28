@@ -30,10 +30,15 @@
                 <textarea class='description form-control' rows="5"  name='body' placeholder='本文を入力'></textarea>
               </div>
               <div class="form-group">
-                <label>商品コード</label>
+              <label>商品コード</label>
+              @isset($code)   
+                <input type='text' value="{{$code}}" class='form-control' name='itemCode' placeholder='商品コードを入力'>
+                @else
                 <input type='text' class='form-control' name='itemCode' placeholder='商品コードを入力'>
-              </div>            
+                @endisset
+              </div>  
               <input type='submit' class='btn btn-primary' value='レビューを登録'>
+
             </div>
         </div>
       </form>

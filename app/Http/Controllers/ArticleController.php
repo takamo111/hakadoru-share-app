@@ -28,8 +28,8 @@ class ArticleController extends Controller
             $articles = Article::paginate(15);
             }
 
-        $m_reports = Article::whereBetween('articles.created_at', [now()->startOfMonth()->format('Y-m-d'), now()->endOfMonth()->format('Y-m-d')])->count();
-        $d_reports = Article::whereBetween('articles.created_at', [now()->startOfDay()->format('Y-m-d'), now()->endOfDay()->format('Y-m-d')])->count();
+            $m_reports = Article::whereBetween('articles.created_at', [now()->startOfMonth()->format('Y-m-d'), now()->endOfMonth()->format('Y-m-d')])->count();
+            $d_reports = Article::whereBetween('articles.created_at', [now()->startOfDay()->format('Y-m-d'), now()->endOfDay()->format('Y-m-d')])->count();
 
 
                 return view('articles.index', ['articles' => $articles,'m_reports' =>$m_reports,'d_reports' =>$d_reports]);
@@ -45,8 +45,17 @@ class ArticleController extends Controller
         }
 
 
-        public function create()
+        public function create(Request $request)
         {
+            if (isset( $request->code )) {
+                $code = $request->code;
+                return view('articles.create',['code' => $code]);
+
+                }
+            else
+
+                
+
                 return view('articles.create');
 
         }
