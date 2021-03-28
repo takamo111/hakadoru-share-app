@@ -108,7 +108,7 @@
               <div class="article-name py-2">{{ $comment->text }}</div>
               <p class="comment-day">投稿日：{{ $comment->created_at->format('Y年m月d日') }}
               @if ($comment->user->id == Auth::user()->id)
-            <a class="text-danger" data-remote="true" rel="nofollow" data-method="delete" href="/comment/{{ $comment->id }}">削除する</a>
+            <a class="text-danger mx-3" data-remote="true" rel="nofollow" data-method="delete" href="/comment/{{ $comment->id }}">削除する</a>
             @endif
               </p>
             </div>
