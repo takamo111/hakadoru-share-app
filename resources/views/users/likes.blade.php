@@ -5,10 +5,10 @@
 @endsection
 
 @section('content')
-  <div class="container">
-    @include('users.user')
-    @include('users.tabs', ['hasArticles' => true, 'hasLikes' => false])
-      <div class="row">
+<div class="container">
+  @include('users.user')
+  @include('users.tabs', ['hasArticles' => false, 'hasLikes' => true])
+    <div class="row">
         <div class="main_column col-12 ">
               <!-- タブ -->
             <!-- 商品カード一覧 -->

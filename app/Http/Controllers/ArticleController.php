@@ -4,23 +4,58 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ArticleRequest;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 use App\Article;
+use App\Comment;
+use App\User;
 
 use RakutenRws_Client;
+
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
         public function index(Request $request)
         {
-                $articles = Article::paginate(15);
-                return view('articles.index', ['articles' => $articles]);
+            if (isset( $request->number )) {
+            $number = $request->number;
+            $query = Article::query();
+            $query->where('genre_id', $number); 
+            $articles = $query->paginate(1);
+            }
+            else{
+            $articles = Article::paginate(15);
+            }
+
+            $m_reports = Article::whereBetween('articles.created_at', [now()->startOfMonth()->format('Y-m-d'), now()->endOfMonth()->format('Y-m-d')])->count();
+            $d_reports = Article::whereBetween('articles.created_at', [now()->startOfDay()->format('Y-m-d'), now()->endOfDay()->format('Y-m-d')])->count();
+
+
+                return view('articles.index', ['articles' => $articles,'m_reports' =>$m_reports,'d_reports' =>$d_reports]);
                 var_dump($articles);
+
+        }
+
+        public function genre(Request $request)
+        {
+            $articles = Article::where('genre_id', '1')->first();
+    
+            return view('articles.genre', ['articles' => $articles]);
         }
 
 
-        public function create()
+        public function create(Request $request)
         {
+            if (isset( $request->code )) {
+                $code = $request->code;
+                return view('articles.create',['code' => $code]);
+
+                }
+            else
+
+                
+
                 return view('articles.create');
 
         }
@@ -107,7 +142,7 @@ class ArticleController extends Controller
         }
 
         
-        public function show(Article $article)
+        public function show(Article $article, Comment $comment)
         {
             return view('articles.show', ['article' => $article]);
         }  

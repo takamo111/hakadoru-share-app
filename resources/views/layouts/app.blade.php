@@ -11,7 +11,8 @@
       <title>{{ config('app.name', 'Hakadoru') }}</title>
 
       <!-- Scripts -->
-
+      <script src="{{ mix('js/app.js') }}"></script>
+      <script src="{{ asset('js/app.js') }}" defer></script>
       
       <!-- Fonts -->
       <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -22,7 +23,7 @@
       <link href="{{ mix('css/app.css') }}" rel="stylesheet">
       <link href="{{ asset('css/layout.css') }}" rel="stylesheet">
       <link href="{{ asset('css/utility.css') }}" rel="stylesheet">
-      <script src="{{ asset('js/app.js') }}" defer></script>
+
       
       @yield('css')
     </head>
@@ -45,15 +46,15 @@
                   </a>
                 </li>              
                 <li class="nav-item mx-1 underline_effect">
-                  <a href="{{ route('articles.index') }}" class="nav-link text-center p-0 text-white">
+                  <a href=" /articles" class="nav-link text-center p-0 text-white">
                   <i class="fas fa-comment fa-lg"></i> 
                     <span class="text-center d-block" style="font-size: 10px;">レビューを見る</span>
                   </a>
                 </li> 
-                <li class="nav-item mx-1 underline_effect">
-                  <a href="{{route('articles.create')}}" class="nav-link text-center p-0 text-white">
-                    <i class="fa fa-edit fa-lg"></i> 
-                    <span class="text-center d-block" style="font-size: 10px;">レビューを投稿</span>
+                  <li class="nav-item mx-1 underline_effect">
+                  <a href="{{route('searchs.index')}}" class="nav-link text-center p-0 text-white">
+                    <i class="fa fa-search fa-lg"></i> 
+                    <span class="text-center d-block" style="font-size: 10px;">商品検索</span>
                   </a>
                 </li> 
                 @if (Route::has('register'))
@@ -80,7 +81,7 @@
                 </li>
                   
                 <li class="nav-item mx-1 underline_effect">
-                  <a href="{{ route('articles.index') }}" class="nav-link text-center p-0 text-white">
+                  <a href=" /articles" class="nav-link text-center p-0 text-white">
                     <i class="fas fa-comment fa-lg"></i> 
                     <span class="text-center d-block" style="font-size: 10px;">レビューを見る</span>
                   </a>
@@ -91,6 +92,11 @@
                     <span class="text-center d-block" style="font-size: 10px;">レビューを投稿</span>
                   </a>
                 </li> 
+                <li class="nav-item mx-1 underline_effect">
+                  <a href="{{route('searchs.index')}}" class="nav-link text-center p-0 text-white">
+                    <i class="fa fa-search fa-lg"></i> 
+                    <span class="text-center d-block" style="font-size: 10px;">商品検索</span>
+                  </a>
                 <!-- ドロップダウン -->
                 @auth
                 <li class="av-item mx-1 underline_effect">
@@ -130,5 +136,6 @@
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
       <!-- MDB core JavaScript -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
+      <script src="{{ mix('js/app.js') }}"></script>
     </body>
   </html>

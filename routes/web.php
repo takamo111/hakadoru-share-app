@@ -27,8 +27,10 @@ Auth::routes();
 
 Route::resource('/articles', 'ArticleController')->except(['show','index'])->middleware('auth'); 
 Route::resource('/articles', 'ArticleController')->only(['show','index']);
+Route::get('/articles/{genre_id}', 'ArticleController@genre')->name('articles.genre');
 
-Route::resource('/searchs', 'SearchController')->only(['store','index']);
+Route::resource('/searchs', 'SearchController')->only(['index','create']);
+Route::get('/searchs/detail', 'SearchController@detail')->name('searchs.detail');
 
 Route::prefix('articles')->name('articles.')->group(function () {
   Route::put('/{article}/like', 'ArticleController@like')->name('like')->middleware('auth');
@@ -37,9 +39,12 @@ Route::prefix('articles')->name('articles.')->group(function () {
 
 Route::prefix('users')->name('users.')->group(function () {
   Route::get('/{name}', 'UserController@show')->name('show');
+  Route::get('/{name}/likes', 'UserController@likes')->name('likes');
 
   Route::middleware('auth')->group(function () {
     Route::put('/{name}/follow', 'UserController@follow')->name('follow');
     Route::delete('/{name}/follow', 'UserController@unfollow')->name('unfollow');
 });
 });
+
+Route::resource('comment', 'CommentController')->only(['store']);

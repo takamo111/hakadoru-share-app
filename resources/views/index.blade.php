@@ -77,14 +77,14 @@
             <div class="col-md-4  col-12">
               <div class="card-ttl">レビュー総数</div>
               <p class="w-75 mx-auto">
-                1 
+                1
                 <span class="bold2">数</span>
               </p>
             </div>
             <div class="col-md-4  col-12">
               <div class="card-ttl">本日のレビュー数</div>
               <p class="w-75 mx-auto">
-                1 
+              {{}}
                 <span class="bold2">数</span>
               </p>
             </div>
