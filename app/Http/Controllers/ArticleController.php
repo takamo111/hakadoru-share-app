@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
-        public function index(Request $request)
+        public function index(Request $request, Article $article)
         {
             if (isset( $request->number )) {
             $number = $request->number;
@@ -31,8 +31,12 @@ class ArticleController extends Controller
             $m_reports = Article::whereBetween('articles.created_at', [now()->startOfMonth()->format('Y-m-d'), now()->endOfMonth()->format('Y-m-d')])->count();
             $w_reports = Article::whereBetween('articles.created_at', [now()->startOfWeek()->format('Y-m-d'), now()->endOfWeek()->format('Y-m-d')])->count();
 
+            $count = User::withCount('likes')->count();
 
-                return view('articles.index', ['articles' => $articles,'m_reports' =>$m_reports,'w_reports' =>$w_reports]);
+
+
+
+                return view('articles.index', ['articles' => $articles,'m_reports' =>$m_reports,'w_reports' =>$w_reports,'count' => $count]);
                 var_dump($articles);
 
         }

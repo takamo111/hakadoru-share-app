@@ -119,7 +119,7 @@
               </table>
             </section> 
             <div>
-              <h4 class="h2-line mt-3">いいね数ユーザーランキング</h4>
+              <h4 class="h2-line mt-3">{{ $count }}</h4>
             </div> 
             <section class="box rounded my-3" style="border: 2px solid rgb(214, 223, 229);">
               <table class="table position-relative table-hover">

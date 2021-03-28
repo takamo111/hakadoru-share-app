@@ -1,4 +1,7 @@
-<div class="card mt-3">
+
+  
+
+    <div class="card">
       <div class="card-body">
         <div class="d-flex flex-row">
           <a href="{{ route('users.show', ['name' => $user->name]) }}" class="text-dark">
@@ -31,3 +34,4 @@
         </div>
       </div>
     </div>
+  </div>

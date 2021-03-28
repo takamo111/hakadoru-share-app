@@ -102,10 +102,15 @@
       </form>
    
             @foreach ($article->comments as $comment) 
+            
             <div class="table border-top border-dark pt-3">
             <a class="font-weight-bold text-dark" href="/users/{{ $comment->user->name }}">投稿者：{{ $comment->user->name }}</a>
               <div class="article-name py-2">{{ $comment->text }}</div>
-              <p class="">投稿日：{{ $comment->created_at->format('Y年m月d日') }}</p>
+              <p class="comment-day">投稿日：{{ $comment->created_at->format('Y年m月d日') }}
+              @if ($comment->user->id == Auth::user()->id)
+            <a class="text-danger" data-remote="true" rel="nofollow" data-method="delete" href="/comment/{{ $comment->id }}">削除する</a>
+            @endif
+              </p>
             </div>
             @endforeach
 
