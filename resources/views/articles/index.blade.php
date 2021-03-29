@@ -26,6 +26,13 @@
               <a class="dropdown-item" href="/articles?number=8">その他</a>
           </div>
         </div>
+        <thead>
+            <tr>
+                <td>@sortablelink('id', 'ID')
+                <td>@sortablelink('name', '名前')
+                <td>@sortablelink('created_at', '作成日')
+                <td>@sortablelink('updated_at', '更新日')
+        </thead>
 
           <!-- 商品カード一覧 -->
         <div class="tab-content">

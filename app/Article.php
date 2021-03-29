@@ -4,16 +4,22 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use Kyslik\ColumnSortable\Sortable;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Article extends Model
 {
+
+    use Sortable; 
+    public $sortable = ['id', 'name', 'created_at', 'updated_at'];
+
     public function user(): BelongsTo
     {
         return $this->belongsTo('App\User');
 
     }
+
 
     public function likes(): BelongsToMany
     {
