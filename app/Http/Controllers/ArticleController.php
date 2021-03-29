@@ -22,10 +22,10 @@ class ArticleController extends Controller
             $number = $request->number;
             $query = Article::query();
             $query->where('genre_id', $number); 
-            $articles = $query->paginate(15);
+            $articles = $query->orderBy('id', 'desc')->paginate(15);
             }
             else{
-            $articles = Article::paginate(15);
+            $articles = Article::orderBy('id', 'desc')->paginate(15);
             }
 
             $m_reports = Article::whereBetween('articles.created_at', [now()->startOfMonth()->format('Y-m-d'), now()->endOfMonth()->format('Y-m-d')])->count();

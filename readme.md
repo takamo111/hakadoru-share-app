@@ -1,72 +1,195 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# README
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# アプリ名
+ 
+ハカドルシェア - Hakadoru Share -
 
-## About Laravel
+# 概要
+ 
+ハカドルシェア - Hakadoru Share -は、自分のおすすめ商品を紹介できるアプリです。  
+  
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<a href="https://gyazo.com/07a43c72f10a861693bde666372d4289"><img src="https://i.gyazo.com/07a43c72f10a861693bde666372d4289.png" alt="Image from Gyazo" width="50%"/></a>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+ 
+# 本番環境
+heroku  
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# 制作背景（意図）
+・
+・前回SNS形式のアプリを作成したため違う形式のものを作りたいと思いクイズアプリを作成しました。また、あまり無い題材のクイズを作りたいと思い、大学で地学を専攻していたことから、馴染みのある鉱物を題材にしてアプリを作成しました。  
+・前回はRuby on Railsでのアプリ作成を行いましたが、より幅を広げるため、PHP,laravelでアプリを作成しました。  
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+# DEMO
 
-## Laravel Sponsors
+## トップページ
+ホーム画面のロゴは、ocanvaというロゴを作成できるサービスで作っています。 
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
+<a href="https://gyazo.com/e26bb08ad859bbb94a800257ae936003"><img src="https://i.gyazo.com/e26bb08ad859bbb94a800257ae936003.png" alt="Image from Gyazo" width="100%"/></a>
 
-## Contributing
+### 出題カテゴリー選択
+出題するカテゴリーを選ぶことができます。鉱物の分類には元素鉱物、酸化鉱物、炭酸塩鉱物、珪酸塩鉱物、硫化鉱物、宝石、その他の7種類があります。全項目を選択するには『全項目チェック』のONを選択します。
+クイズを開始する場合は『出題開始』を押してください(問題が10問に満たない場合はトップページに戻ります）  
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<a href="https://gyazo.com/7a31ba98210e5239a1f83730362288be"><img src="https://i.gyazo.com/7a31ba98210e5239a1f83730362288be.png" alt="Image from Gyazo" width="100%"/></a>
 
-## Security Vulnerabilities
+### ランキング機能
+会員登録を行いクイズを回答すると、高得点の順にこのランキングに名前が載ります。総合、月間、週間ごとにランキングが分かれています。  
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<a href="https://gyazo.com/392583d2e4992af5931f32480c52b71d"><img src="https://i.gyazo.com/392583d2e4992af5931f32480c52b71d.png" alt="Image from Gyazo" width="50%"/></a>
 
-## License
+## 会員登録
+### 新規登録
+登録を行わなくてもクイズはできますが、新規登録を行うとマイページ機能とランキング機能が使えます。登録には名前、メールアドレスとパスワードを入力します。  
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<a href="https://gyazo.com/7d584cbe70948c36b4771699436e5398"><img src="https://i.gyazo.com/7d584cbe70948c36b4771699436e5398.png" alt="Image from Gyazo" width="100%"/></a>
+
+### サインイン  
+<a href="https://gyazo.com/1ca821f19581c8a9ad65d9f1c93002ec"><img src="https://i.gyazo.com/1ca821f19581c8a9ad65d9f1c93002ec.png" alt="Image from Gyazo" width="100%"/></a>
+
+## クイズ画面
+
+### 回答前
+鉱物の特徴と写真を元にその鉱物の名前は何か4択から回答してください。  
+全部で10問、選択したカテゴリーの中からランダムで出題されます。  
+
+<a href="https://gyazo.com/8359c0c600dc4e13de49a2971f5b8bad"><img src="https://i.gyazo.com/8359c0c600dc4e13de49a2971f5b8bad.png" alt="Image from Gyazo" width="100%"/></a>
+
+### 回答後
+回答後は正解番号とと解説が表示されます。こちらの解説は鉱物解説機能でも見ることができます。10問答えると正答率が表示されます。  
+
+<a href="https://gyazo.com/4464e7c29264174a28571f2d4c8ff4e6"><img src="https://i.gyazo.com/4464e7c29264174a28571f2d4c8ff4e6.png" alt="Image from Gyazo" width="100%"/></a>
+
+### 正答率表示(10問回答後)
+10問回答を行うと最後に正答率が表示されます。  
+
+<a href="https://gyazo.com/46d5b6c424bd71cc075bd0c965c8b3a6"><img src="https://i.gyazo.com/46d5b6c424bd71cc075bd0c965c8b3a6.png" alt="Image from Gyazo" width="50%"/></a>
+
+
+## 鉱物解説機能
+鉱物の解説を見たい方は右側の鉱物解説から見ることができます。  
+
+<a href="https://gyazo.com/6531fae184227d23c72a49c82e0b5354"><img src="https://i.gyazo.com/6531fae184227d23c72a49c82e0b5354.png" alt="Image from Gyazo" width="100%"/></a>
+
+## マイページ画面
+マイページではクイズの正答率をグラフとして見ることができます。  
+
+<a href="https://gyazo.com/61df49f6ed1ab2148ad83da48c1bdf18"><img src="https://i.gyazo.com/61df49f6ed1ab2148ad83da48c1bdf18.png" alt="Image from Gyazo" width="50%"/></a>
+
+
+
+# 工夫したポイント
+・クイズを解いていくことで自然に鉱物の知識を得られるように写真と説明を交えて問題を作成した。  
+・回答後に正答率をすぐ確認できるようにした。  
+・トップページから全ての機能にアクセスできるようにした。  
+
+# 使用技術（開発環境）
+
+## バックエンド
+PHP,laravel
+## フロントエンド
+HTTP,Sass,Vue.js,Node.js
+## データベース
+PostgreSQL 
+## インフラ
+heroku
+## ソース管理
+GitHub, GitHubDesktop
+## テスト
+RSpec
+## エディタ
+VSCode
+
+# 課題や今後実装したいこと
+・問題のバリエーションを増やす  
+・ユーザー同士のコミュニケーション機能(いいねやコメントなど)  
+
+
+
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+
+### Association
+- has_one :ranking
+
+
+
+
+## informationsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|percentage_correct_answer|int||
+
+
+## rankingsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+
+- belongs_to :user
+
+## categoriesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+
+
+### Association
+- belongs_to :keyword
+- belongs_to :quiz
+
+
+## quizzesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|title|string||
+|image_src|string|nullable|
+|answers_id|int||
+|categories_id|int||
+
+### Association
+- has_one :answer
+- has_one :category
+
+
+## answersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|answer_1|string||
+|answer_2|string||
+|answer_3|string||
+|answer_4|string||
+|correct_answer_no|int||
+|commentary|text||
+
+### Association
+- belongs_to :quiz
+
+
+## keywordsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|initial|string||
+|description|text||
+|keyword|string||
+|image_src|string|nullable|
+|categories_id|int||
+
+### Association
+- has_one :category
+
+
