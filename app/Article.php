@@ -12,8 +12,15 @@ class Article extends Model
 {
 
     use Sortable; 
-    public $sortable = ['id', 'name', 'created_at', 'updated_at'];
+    public $sortable = ['id', 'title', 'created_at', 'updated_at'];
 
+    public function userCountSortable($query, $direction)
+    {
+            return $query->orderBy('user_count', $direction);
+    }
+    
+    
+    
     public function user(): BelongsTo
     {
         return $this->belongsTo('App\User');

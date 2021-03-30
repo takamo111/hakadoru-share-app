@@ -28,10 +28,11 @@
         </div>
         <thead>
             <tr>
-                <td>@sortablelink('id', 'ID')
-                <td>@sortablelink('name', '名前')
-                <td>@sortablelink('created_at', '作成日')
+                <td>@sortablelink('id', '投稿順')
+                <td>@sortablelink('title', 'タイトル')
+                <td>@sortablelink('created_at', '投稿順')
                 <td>@sortablelink('updated_at', '更新日')
+                <th>@sortablelink('userCount', 'お気に入り')</th>
         </thead>
 
           <!-- 商品カード一覧 -->
@@ -64,7 +65,7 @@
               </div>
               @endforeach   
             </div>
-            {{ $articles->appends(request()->input())->links()  }}
+            {{ $articles->appends(request()->query())->links()  }}
           </div>  
         </div>
       </div>

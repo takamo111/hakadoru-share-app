@@ -49,12 +49,12 @@ return [
     /*
     suffix class that is appended when ascending direction is applied
      */
-    'asc_suffix'                    => '-asc',
+    'asc_suffix'                    => '-up',
 
     /*
     suffix class that is appended when descending direction is applied
      */
-    'desc_suffix'                   => '-desc',
+    'desc_suffix'                   => '-down',
 
     /*
     default anchor class, if value is null none is added
@@ -100,12 +100,12 @@ return [
     /*
     default direction for: $user->sortable('id') usage
      */
-    'default_direction'             => 'asc',
+    'default_direction'             => 'desc',
 
     /*
     default direction for non-sorted columns
      */
-    'default_direction_unsorted'    => 'asc',
+    'default_direction_unsorted'    => 'desc',
 
     /*
     use the first defined sortable column (Model::$sortable) as default

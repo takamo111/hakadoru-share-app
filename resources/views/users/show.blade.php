@@ -6,7 +6,7 @@
 
 @section('content')
   <div class="container">
-  <div class="main_column col-12 ">
+    <div class="main_column col-12 ">
     @include('users.user')
     @include('users.tabs', ['hasArticles' => true, 'hasLikes' => false])
       <div class="row">
