@@ -32,7 +32,7 @@
                 <td>@sortablelink('title', 'タイトル')
                 <td>@sortablelink('created_at', '投稿順')
                 <td>@sortablelink('updated_at', '更新日')
-                <th>@sortablelink('userCount', 'お気に入り')</th>
+                <th>@sortablelink('userCountSortable', 'いいね順')</th>
         </thead>
 
           <!-- 商品カード一覧 -->
