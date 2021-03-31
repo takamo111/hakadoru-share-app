@@ -20,6 +20,7 @@ class CreateCommentsTable extends Migration
             $table->bigInteger('article_id');
             $table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');
             $table->text('text');
+            $table->text('comment_rating')->nullable();
 
             $table->timestamps();
         });

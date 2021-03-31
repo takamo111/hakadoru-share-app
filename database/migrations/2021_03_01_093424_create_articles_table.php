@@ -18,6 +18,7 @@ class CreateArticlesTable extends Migration
             $table->integer('genre_id');
             $table->string('title');
             $table->text('body');
+            $table->text('article_rating');
             $table->text('r_image_url_a')->nullable();
             $table->text('r_image_url_b')->nullable();
             $table->text('r_image_url_c')->nullable();

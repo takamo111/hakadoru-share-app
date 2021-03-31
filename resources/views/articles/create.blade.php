@@ -29,6 +29,15 @@
               <label>レビュー本文</label>
                 <textarea class='description form-control' rows="5"  name='body' placeholder='本文を入力'></textarea>
               </div>
+
+              <label>オススメ度</label>
+                <textarea class='description form-control' name='rating' placeholder='本文を入力'></textarea>
+              
+              <div id="star">
+                <star-rating star-size="30"  v-model="rating"></star-rating>
+              </div>
+
+
               <div class="form-group">
               <label>商品コード</label>
               @isset($code)   

@@ -30,6 +30,9 @@
                   @endisset
                 </div>
               </div>
+              <div id="star">
+                <star-rating star-size="30"  ></star-rating>
+              </div>
               <div class="card-body border">
               <h5> {{ $article->body }} </h5>
             </div>
