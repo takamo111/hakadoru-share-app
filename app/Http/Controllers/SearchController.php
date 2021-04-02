@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use RakutenRws_Client;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class SearchController extends Controller
 {
@@ -28,6 +29,7 @@ class SearchController extends Controller
                $response = $client->execute('IchibaItemSearch', array(
                    //入力パラメーター
                    'keyword' => $keyword,
+                   'hits' => 30,
                ));
                // レスポンスが正しいかを isOk() で確認
                if ($response->isOk()) {
@@ -46,6 +48,7 @@ class SearchController extends Controller
                    );
 
                }
+
                } else {
                    echo 'Error:'.$response->getMessage();
                  }
@@ -81,7 +84,7 @@ class SearchController extends Controller
             ));
             // レスポンスが正しいかを isOk() で確認
             if ($response->isOk()) {
-            $items = array();
+            $items = array()->take(10)->get();
             foreach ($response as $item){
                 $str = str_replace("_ex=128x128", "_ex=175x175", $item['mediumImageUrls'][0]['imageUrl']);
                 $items[] = array(
@@ -100,7 +103,9 @@ class SearchController extends Controller
                     'siteIcon' => "../images/rakuten_logo.png",
                 );
 
+                
             }
+
             } else {
                 echo 'Error:'.$response->getMessage();
               }

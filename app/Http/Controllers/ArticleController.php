@@ -31,7 +31,9 @@ class ArticleController extends Controller
             $m_reports = Article::whereBetween('articles.created_at', [now()->startOfMonth()->format('Y-m-d'), now()->endOfMonth()->format('Y-m-d')])->count();
             $w_reports = Article::whereBetween('articles.created_at', [now()->startOfWeek()->format('Y-m-d'), now()->endOfWeek()->format('Y-m-d')])->count();
 
-            $count = User::withCount('likes')->count();
+        
+            $count = $article->likes->count();
+
 
 
 
@@ -72,7 +74,7 @@ class ArticleController extends Controller
 
             $items = '';
 
-            //楽天APIを扱うRakutenRws_Clientクラスのインスタンスを作成します
+            //楽天APIを扱うRakutenRws_Clientクラスのインスタンスを作成
             $client = new RakutenRws_Client();
 
             //定数化
@@ -82,7 +84,7 @@ class ArticleController extends Controller
             //アプリIDをセット
             $client->setApplicationId(RAKUTEN_APPLICATION_ID);
     
-            //リクエストから検索キーワードを取り出し
+            //リクエストからアイテムコードを取り出し
             $itemcode = $request->input('itemCode');
     
             // IchibaItemSearch API から、指定条件で検索
