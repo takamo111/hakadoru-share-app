@@ -118,7 +118,7 @@ class ArticleController extends Controller
             $article->genre_id = $request->genre_id;
             $article->title = $request->title;
             $article->body = $request->body;
-            $article->rating = $request->rating;
+            $article->article_rating = $request->article_rating;
             $article->user_id = $request->user()->id;
             $article->save();
             return redirect()->route('articles.index');

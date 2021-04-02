@@ -20,6 +20,7 @@ class CommentController extends Controller
     {
         $comment = new Comment();
         $comment->text = $request->text;
+        $comment->comment_rating = $request->comment_rating;
         $comment->user_id = Auth::id();
         $comment->article_id = $request->article_id;
         

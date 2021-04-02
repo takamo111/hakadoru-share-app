@@ -30,11 +30,11 @@
                   @endisset
                 </div>
               </div>
-              <div id="star">
-                <star-rating star-size="30"  ></star-rating>
-              </div>
               <div class="card-body border">
               <h5> {{ $article->body }} </h5>
+            </div>
+            <div class="card-body border mt-3">
+            <star-rating :rating="{{ $article->article_rating }}" :read-only="true" :star-size="30" ></star-rating>
             </div>
             <table class="table table-striped my-4" style="color: rgb(80, 80, 80);">
               <tbody>
@@ -97,6 +97,11 @@
                 <textarea class='description form-control' rows="6" name='text' placeholder='コメントを入力'></textarea>
               </div>
               <div class="form-group">
+              <label>オススメ度</label>
+              <textarea class='description form-control' style='display:none' name='comment_rating'>@{{ rating }}</textarea>
+                <star-rating star-size="25" v-model="rating"></star-rating>
+                </div>
+              <div class="form-group">
               <input value="{{ Auth::user()->id }}" type="hidden" name="user_id" />
               <input value="{{ $article->id }}" type="hidden" name="article_id" />
               <input type='submit' class='btn btn-primary' value='コメントする'>
@@ -108,6 +113,7 @@
             
             <div class="table border-top border-dark pt-3">
             <a class="font-weight-bold text-dark" href="/users/{{ $comment->user->name }}">投稿者：{{ $comment->user->name }}</a>
+            <star-rating :rating="{{ $comment->comment_rating }}" :read-only="true" :star-size="30" ></star-rating>
               <div class="article-name py-2">{{ $comment->text }}</div>
               <p class="comment-day">投稿日：{{ $comment->created_at->format('Y年m月d日') }}
               @if ($comment->user->id == Auth::user()->id)
