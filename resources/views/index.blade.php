@@ -36,17 +36,58 @@
               <h1 class="mt-5 text-secondary "> ハカドル=シェアとは </h1>
               <div class="m-3  border-bottom border-primary "> </div>
             </div>
-            <h4 class="text-center font-weight-bold">便利商品のレビューサイトです。</h4>
+            <h4 class="text-center font-weight-bold">便利商品を共有できるレビューサイトです。</h4>
             <h6 class="text-center font-weight-bold">ネットでたまに見かける便利な商品ランキングって見ているだけでわくわくしませんか？</h6>
             <h6 class="text-center font-weight-bold">ネットでたまに</h6>
             <h6 class="text-center font-weight-bold">ネットでたまに</h6>
             <h6 class="text-center font-weight-bold">ネットでたまに</h6>
             <h6 class="text-center font-weight-bold">ネットでたまに</h6>
-            <div class="text-center mt-5"> 
-              <a href="{{route('articles.create')}}" class="btn btn-danger btn-lg">
-              <i class="fa fa-edit mr-2"></i>
-                投稿する
-              </a>
+
+            <div class="container py-4 border">
+              <h5 class="text-center font-weight-bold my-3">STEP1 ユーザー登録</h5>            
+              <div class="text-center my-1"> 
+                <a href="{{ route('register') }}" class="btn btn-danger btn">
+                <i class="fa fa-user-plus mr-2"></i>
+                  新規登録
+                </a>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+            <i class="fa fa-angle-down fa-3x mr-2"  ></i>
+            </div>
+            <div class="container py-4 border">
+              <h5 class="text-center font-weight-bold mt-4">STEP2 商品検索</h5>
+              <div class="row justify-content-center">
+                <div>
+                  <div class="card-body card-body-top p-2">
+                    <form class="form-inline" action="{{ route('searchs.index') }}" method="get">
+                      <div class="form-group">
+                      <input type="text" name="keyword"  class="form-control" style="width:250px;" placeholder="こちらからも検索できます">
+                      </div>
+                      <input type="submit" value="検索" class="btn btn-info">
+                    </form>
+                  </div>
+                  <div class="container">
+                    <img src="{{ asset('images/search.png') }}" class="img-fluid" alt="Responsive image" width="100%" height="100%"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+            <i class="fa fa-angle-down fa-3x mr-2"  ></i>
+            </div>
+            <div class="container py-4 border">
+              <div class="card-body card-body-top p-2">
+                <h5 class="text-center font-weight-bold mt-4">STEP3 投稿する </h5>
+                <div class="text-center mt-5"> 
+                  <a href="{{route('articles.create')}}" class="btn btn-danger btn-lg">
+                  <i class="fa fa-edit mr-2"></i>
+                    投稿する
+                  </a>
+                </div>
+              </div>
+            </div>
+
               <p class="text-center font-weight-bold mt-2"> <span style="background: linear-gradient(transparent 50%, yellow 50%); font-size: 20px;">あなたのオススメ商品を教えてください！</span> </p>
             </div>
             <div class="row mb-3 mt-5">

@@ -70,6 +70,7 @@
                         <i class="fab fa-google mr-1"></i>Google でログイン
                      </a>
                   </div>
+                  <a href="{{ route("twitter.login") }}" class="btn btn-primary">Twitterでログイン</a>//追加
                 </div>
               </div>
             </div>

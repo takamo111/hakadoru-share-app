@@ -52,3 +52,7 @@ Route::prefix('users')->name('users.')->group(function () {
 
 Route::resource('comment', 'CommentController')->only(['store']);
 Route::get('/comment/{comment_id}', 'CommentController@destroy');
+
+Route::get('/login/twitter', 'Auth\TwitterController@redirectToProvider')->name("twitter.login");
+Route::get('/login/twitter/callback', 'Auth\TwitterController@handleProviderCallback'); 
+
