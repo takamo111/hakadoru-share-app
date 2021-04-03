@@ -26,7 +26,7 @@
       <div class="row bg-secondary ">
       @foreach($items as $item)      
         <!-- 商品カード -->
-        <div class="card col-md-12 my-2" style="width: 15rem;" >
+        <div class="card col-md-11 my-2 mx-auto" style="width: 15rem;" >
           <div class="row">
             <div class=" col-2 ">
               <div class='card-image-main ' >

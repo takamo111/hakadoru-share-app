@@ -8,7 +8,7 @@
       <!-- CSRF Token -->
       <meta name="csrf-token" content="{{ csrf_token() }}">
 
-      <title>{{ config('app.name', 'Hakadoru') }}</title>
+      <title>{{ config('app.name', 'Hakadoru=Share') }}</title>
 
       <!-- Scripts -->
       <script src="{{ mix('js/app.js') }}"></script>
@@ -37,7 +37,7 @@
             <!-- ヘッダー左側 -->
             <a class="navbar-brand" href="{{ url('/') }}">
               <img class='navbar-logo' src="{{ asset('images/logo.png') }}">
-              {{ config('app.name', 'HakadoruShare') }}
+              {{ config('ハカドル=シェア', 'Hakadoru=Share') }}
             </a>
             <!-- ヘッダー右側  -->
             <ul class="navbar-nav ml-auto">
@@ -128,7 +128,7 @@
           @yield('content')
         </main>
         <footer class='footer p20'>
-          <small class='copyright'>Hakadoru Serch 2021 copyright</small>
+          <small class='copyright'>Hakadoru=Share 2021 copyright</small>
         </footer>
       </div>
 
