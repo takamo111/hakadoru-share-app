@@ -33,33 +33,27 @@
                 <td>@sortablelink('updated_at', '更新日')
               </th>
         </thead>
-
           <!-- 商品カード一覧 -->
         <div class="tab-content">
           <div id="home" class="main_column col-md-12 tab-pane active ">
             <div class="row bg-secondary ">
-              @foreach($articles as $article)
-              
+              @foreach($articles as $article)            
               <!-- 商品カード -->
-              <div class="card m-4 " style="width: 15rem;" >
-              
+              <div class="card m-2  mx-auto " style="width: 15rem;" >          
                 <div class='card-image-main border' >
                   <img class='card-image' src="{{ $article->r_image_url_a }}" width="100%" height="180"></img>
                   <!-- dropdown -->
                   @include('articles.dropdown')
                   <!-- dropdown -->
-
                 </div>
                 <div class="card-body" style="height: 6rem;">
                   <h5 class="card-text text-truncate">{{ $article->title }}</h5>
-                  <p class="card-text text-truncate">{{ $article->body }}</p>
-                  {{$article->count_likes }}
-                  
+                  <p class="card-text text-truncate">{{ $article->body }}</p>            
                 </div>
                 <a class=" border border-primary text-center animated swing infinite  " href="{{ route('articles.show', ['article' => $article]) }}"  style="height: 3rem;">
                   <h5 class="text-primary" > 
                   <i class="fas fa-newspaper mr-1"></i>         
-                    レビュー詳細</p>
+                  <p>レビュー詳細</p>
                   </h5>
                 </a>
               </div>
@@ -69,9 +63,6 @@
           </div>  
         </div>
       </div>
-
-
-
           <!-- ナビ+投稿数 -->
       <div class="main_column col-md-3 ">
         <div class="bg-light m-4">     
@@ -126,49 +117,10 @@
                 </tbody>
               </table>
             </section> 
-            <div>
-              <h4 class="h2-line mt-3">{{($article->count_likes) }}</h4>
-            </div> 
-            <section class="box rounded my-3" style="border: 2px solid rgb(214, 223, 229);">
-              <table class="table position-relative table-hover">
-                <tbody>
-                  <tr>
-                    <td style="width: 75%; border-top: none;"><i class="fas fa-crown fa-lg mr-2" style="color: gold;"></i>ヒラノ</td> 
-                    <td class="font-weight-bold" style="border-top: none;"><a href="">3</a></td>
-                  </tr> 
-                  <tr>
-                    <td><i class="fas fa-crown fa-lg mr-2" style="color: silver;"></i>いーじま</td> 
-                    <td class="font-weight-bold"><a href="">1</a></td>
-                  </tr> 
-                  <tr>
-                    <td><i class="fas fa-crown fa-lg mr-2" style="color: rgb(140, 72, 65);"></i>グレッチくん</td> <td class="font-weight-bold"><a href="https://musicstore-reviews.com/user/show/6">1</a>
-                    </td>     
-                  </tr> 
-                  <tr>
-                    <td><i class="fas fa-award ml-2 mr-3" style="color: green;"></i>アオケン</td> 
-                    <td class="font-weight-bold"><a href="">1</a></td>
-                  </tr> 
-                  <tr>
-                    <td><i class="fas fa-award ml-2 mr-3" style="color: green;"></i>うしらん</td> 
-                    <td class="font-weight-bold"><a href="">1</a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </section>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 </main>
-
-
-
-
-
 @endsection
-
-
-
-

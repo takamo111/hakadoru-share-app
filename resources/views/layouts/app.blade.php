@@ -43,7 +43,7 @@
             <ul class="navbar-nav ml-auto">
               @guest
                 <li class="nav-item mx-1 underline_effect">
-                  <a href="" class="nav-link text-center p-0 text-white">
+                  <a href="/" class="nav-link text-center p-0 text-white">
                   <i class="fa fa-question-circle fa-lg"></i> 
                     <span class="text-center d-block" style="font-size: 10px;">このサイトについて</span>
                   </a>
@@ -131,15 +131,11 @@
           <small class='copyright'>Hakadoru=Share 2021 copyright</small>
         </footer>
       </div>
-
-
-      <!-- JQuery -->
-      
+      <!-- JQuery -->    
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <!-- Bootstrap tooltips -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
       <!-- MDB core JavaScript -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
-
     </body>
   </html>

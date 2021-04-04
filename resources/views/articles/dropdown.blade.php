@@ -15,8 +15,6 @@
       </a>
     </div>
   </div>
-
-
 <!-- modal -->
     <div id="modal-delete-{{ $article->id }}" class="modal fade" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">

@@ -78,9 +78,6 @@
           </div>
         </div>
       </div>
-
-
-
           <!-- ナビ+投稿数 -->
       <div class="main_column col-md-3 ">
         <div class="bg-light m-4">     
@@ -110,8 +107,7 @@
               </a>
             </div>
           </div>
-        </div>  
-        
+        </div>        
         <div class="bg-light m-4">  
           <div class="container py-4">   
             <div class="asideTitle">
@@ -169,15 +165,5 @@
       </div>
     </div>
   </div>
-
 </main>
-
-
-
-
-
 @endsection
-
-
-
-

@@ -65,13 +65,11 @@
               </tbody>
             </table>
             @endforeach 
-
             <a href="" class="btn-flat-border my-2">戻る</a>
           </div>
         </div>
       </div>
     </div>
-
     @endsection
   
 

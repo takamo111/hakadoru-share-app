@@ -79,13 +79,15 @@
             <div class="container py-4 border">
               <div class="card-body card-body-top p-2">
                 <h5 class="text-center font-weight-bold mt-4">STEP3 投稿する </h5>
-                <div class="text-center mt-5"> 
+                <div class="text-center mt-2"> 
+                  <div class="container">
+                    <img src="{{ asset('images/article.png') }}" class="img-fluid" alt="Responsive image" width="100%" height="100%"></img>
+                  </div>
+                  <div class="card-body card-body-top p-4">
                   <a href="{{route('articles.create')}}" class="btn btn-danger btn-lg">
                   <i class="fa fa-edit mr-2"></i>
                     投稿する
                   </a>
-                  <div class="container">
-                    <img src="{{ asset('images/article.png') }}" class="img-fluid" alt="Responsive image" width="100%" height="100%"></img>
                   </div>
                 </div>
               </div>
@@ -103,46 +105,12 @@
                   </a>
                 </div>
               </div>
-            </div>
-
-              <p class="text-center font-weight-bold mt-2"> <span style="background: linear-gradient(transparent 50%, yellow 50%); font-size: 20px;">あなたのオススメ商品を教えてください！</span> </p>
-            </div>
-            <div class="row mb-3 mt-5">
-              <div class="col-md-6 text-center">
-                <div>
-                  <div class="card-ttl"> <i class="fa fa-edit fa-3x"></i> <span class="font-weight-bold">レビューする</span> </div>
-                  <h6 class="text-center font-weight-bold mt-3">ネットでたまに</h6>
-                </div>
-              </div>
-              <div class="col-md-6 text-center ">
-                <div>
-                  <div class="card-ttl"> <i class="fas fa-comment fa-3x"></i> <span class="font-weight-bold">レビューを見る</span> </div>
-                  <h6 class="text-center font-weight-bold mt-3">ネットでたまに</h6>
-                </div>
-              </div>
-            </div>
+            </div>       
           </div>
         </div>
       </div>
     </section>
     <div class="top-foot">
-      <p class="top-foot-text">SNSを使用する</p>
-      <div class="text-center">
-        <div class="container">
-          <div class="row justify-content-center">
-          <div class="card-body card-body-top p-2">
-                  <div class="center-block">
-                    <p class="text-center text-white font-weight-bold">SNSでログイン</p>
-                    <div class="text-center social-btn"> <a href="login/facebook" class="btn-flat-border-facebook my-1">
-                        <i class="fab fa-facebook"></i>&nbsp; Facebook</a> <a href="login/twitter" class="btn-flat-border-twitter my-1">
-                        <i class="fab fa-twitter"></i>&nbsp; Twitter</a> <a href="login/google" class="btn-flat-border-google my-1">
-                        <i class="fab fa-google"></i>&nbsp; Google</a> </div>
-                  </div>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
