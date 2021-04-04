@@ -28,15 +28,7 @@
               </div>
               <div class="form-group">
               <label>レビュー本文</label>
-                <textarea class='description form-control' name='body' placeholder='本文を入力'>{{ $article->body ?? old('body') }}</textarea>
-              </div>
-              <div class="form-group">
-                <label>商品の画像アドレス入力</label>
-                <input type='text' class='form-control' name='image_url' placeholder='タイトルを入力'required value="{{ $article->image_url ?? old('image_url') }}">
-              </div>            
-              <div class="form-group">
-                <label for="file1">サムネイル</label>
-                <input type="file" id="file1" name='image' class="form-control-file">
+                <textarea class='description form-control' rows="5"  name='body' placeholder='本文を入力'>{{ $article->body ?? old('body') }}</textarea>
               </div>
               <input type='submit' class='btn btn-primary' value='更新する'>
             </div>

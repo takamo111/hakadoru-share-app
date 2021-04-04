@@ -47,6 +47,7 @@ class Article extends Model
     }
 
     protected $fillable = [
-        'title', 'body', 'image_url',
+        'title', 'body', 'article_rating','r_image_url_a','r_image_url_b','r_image_url_c', 'r_name','r_caption','r_item_url','r_price','r_shop','r_code'
     ];
 }
+

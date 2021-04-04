@@ -38,13 +38,13 @@
             </div>
             <h4 class="text-center font-weight-bold">便利商品を共有できるレビューサイトです。</h4>
             <h6 class="text-center font-weight-bold">ネットでたまに見かける便利な商品ランキングって見ているだけでわくわくしませんか？</h6>
-            <h6 class="text-center font-weight-bold">ネットでたまに</h6>
-            <h6 class="text-center font-weight-bold">ネットでたまに</h6>
-            <h6 class="text-center font-weight-bold">ネットでたまに</h6>
-            <h6 class="text-center font-weight-bold">ネットでたまに</h6>
+            <h6 class="text-center font-weight-bold">このサイトでは自分のイチオシ商品の情報を投稿して他のユーザーに共有できます。</h6>
+            <h6 class="text-center font-weight-bold">商品コードから商品情報を自動でまとめてくれるので投稿も簡単!</h6>
+            <h6 class="text-center font-weight-bold">(注意 : 楽天APIを使用しているためラインナップにない商品は投稿できません)</h6>
 
+            <p class="text-center font-weight-bold mt-2"> <span style="background: linear-gradient(transparent 50%, yellow 50%); font-size: 20px;">あなたのオススメ商品を教えてください！</span> </p>
             <div class="container py-4 border">
-              <h5 class="text-center font-weight-bold my-3">STEP1 ユーザー登録</h5>            
+              <h5 class="text-center font-weight-bold my-3">STEP1 新規登録</h5>            
               <div class="text-center my-1"> 
                 <a href="{{ route('register') }}" class="btn btn-danger btn">
                 <i class="fa fa-user-plus mr-2"></i>
@@ -57,18 +57,18 @@
             </div>
             <div class="container py-4 border">
               <h5 class="text-center font-weight-bold mt-4">STEP2 商品検索</h5>
+              <div class="container">
+                    <img src="{{ asset('images/search.png') }}" class="img-fluid my-3" alt="Responsive image" width="100%" height="100%"></img>
+                  </div>
               <div class="row justify-content-center">
                 <div>
                   <div class="card-body card-body-top p-2">
                     <form class="form-inline" action="{{ route('searchs.index') }}" method="get">
                       <div class="form-group">
-                      <input type="text" name="keyword"  class="form-control" style="width:250px;" placeholder="こちらからも検索できます">
+                      <input type="text" name="keyword"  class="form-control" style="width:250px;" placeholder="こちらからも商品検索できます">
                       </div>
                       <input type="submit" value="検索" class="btn btn-info">
                     </form>
-                  </div>
-                  <div class="container">
-                    <img src="{{ asset('images/search.png') }}" class="img-fluid" alt="Responsive image" width="100%" height="100%"></img>
                   </div>
                 </div>
               </div>
@@ -83,6 +83,23 @@
                   <a href="{{route('articles.create')}}" class="btn btn-danger btn-lg">
                   <i class="fa fa-edit mr-2"></i>
                     投稿する
+                  </a>
+                  <div class="container">
+                    <img src="{{ asset('images/article.png') }}" class="img-fluid" alt="Responsive image" width="100%" height="100%"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+            <i class="fa fa-angle-down fa-3x mr-2"  ></i>
+            </div>
+            <div class="container py-4 border">
+              <div class="card-body card-body-top p-2">
+                <h5 class="text-center font-weight-bold mt-4">レビューが投稿されます<br>他のユーザーの投稿にいいねをしたり、コメントもできます！ </h5>
+                <div class="text-center mt-5"> 
+                  <a href=" /articles" class="btn btn-danger btn-lg">
+                  <i class="fa fa-edit mr-2"></i>
+                    レビューを見る<br>
                   </a>
                 </div>
               </div>
@@ -103,35 +120,6 @@
                   <h6 class="text-center font-weight-bold mt-3">ネットでたまに</h6>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--数値集計 -->
-      <div class="row">
-        <div class="col-md-12 mb-6 text-center">
-          <h2>レビュー投稿数</h2>
-          <div class="center-review row col-md-6 mx-auto  mb-3 mt-3" >
-            <div class="col-md-4  col-12">
-              <div class="card-ttl">レビュー総数</div>
-              <p class="w-75 mx-auto">
-                1
-                <span class="bold2">数</span>
-              </p>
-            </div>
-            <div class="col-md-4  col-12">
-              <div class="card-ttl">本日のレビュー数</div>
-              <p class="w-75 mx-auto">
-              {{}}
-                <span class="bold2">数</span>
-              </p>
-            </div>
-            <div class="col-md-4  col-12">
-              <div class="card-ttl">今月のレビュー数</div>
-              <p class="w-75 mx-auto">
-                1 
-                <span class="bold2">数</span>
-              </p>
             </div>
           </div>
         </div>

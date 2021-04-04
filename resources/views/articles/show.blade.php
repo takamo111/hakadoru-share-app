@@ -66,8 +66,15 @@
                     <div class="col-11" style="padding: 0;">{{ $article->r_shop }} </div>
                   </td>
                 </tr>
+                <tr>
+                  <td class="row border-bottom" style=" margin: 0;"  >
+                    <div class="col-1 font-weight-bold" style="padding: 0;">コード</div>
+                    <div class="col-11" style="padding: 0;">{{ $article->r_code }} </div>
+                  </td>
+                </tr>
               </tbody>
             </table>
+            <div class="font-weight-bold">いいね！</div>
             <article-like
               :initial-is-liked-by='@json($article->isLikedBy(Auth::user()))'
               :initial-count-likes='@json($article->count_likes)'
@@ -76,7 +83,7 @@
             >
             </article-like>
             <p>投稿日：{{ $article->created_at->format('Y年m月d日') }}</p>
-            <a href="" class="btn-flat-border my-2">戻る</a>
+            <a href="/" class="btn-flat-border my-2">戻る</a>
           </div>
         </div>
       </div>
@@ -99,7 +106,7 @@
               <div class="form-group">
               <label>オススメ度</label>
               <textarea class='description form-control' style='display:none' name='comment_rating'>@{{ rating }}</textarea>
-                <star-rating star-size="25" v-model="rating"></star-rating>
+                <star-rating :star-size="25" v-model="rating"></star-rating>
                 </div>
               <div class="form-group">
               <input value="{{ Auth::user()->id }}" type="hidden" name="user_id" />
@@ -113,7 +120,7 @@
             
             <div class="table border-top border-dark pt-3">
             <a class="font-weight-bold text-dark" href="/users/{{ $comment->user->name }}">投稿者：{{ $comment->user->name }}</a>
-            <star-rating :rating="{{ $comment->comment_rating }}" :read-only="true" :star-size="30" ></star-rating>
+            <star-rating :rating="{{ $comment->comment_rating }}" :read-only="true" :star-size="17" :show-rating="false" ></star-rating>
               <div class="article-name py-2">{{ $comment->text }}</div>
               <p class="comment-day">投稿日：{{ $comment->created_at->format('Y年m月d日') }}
               @if ($comment->user->id == Auth::user()->id)

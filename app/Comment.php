@@ -9,7 +9,7 @@ class Comment extends Model
 {
     //
 
-   protected $fillable = ['text', 'user_id', 'article_id'];
+   protected $fillable = ['text','comment_rating', 'user_id', 'article_id'];
 
    public function user()
    {

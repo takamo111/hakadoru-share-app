@@ -25,6 +25,7 @@ class CommentRequest extends FormRequest
     {
         return [
             'text' => 'required|max:200',
+            'comment_rating' => 'required|max:200',
             
         ];
     }
@@ -33,7 +34,7 @@ class CommentRequest extends FormRequest
     {
         return [
             'text' => 'コメント',
-
+            'comment_rating' => '星評価',
         ];
     }
 }

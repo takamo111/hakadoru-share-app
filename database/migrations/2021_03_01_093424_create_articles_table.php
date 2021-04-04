@@ -27,6 +27,7 @@ class CreateArticlesTable extends Migration
             $table->text('r_item_url');
             $table->text('r_price');
             $table->text('r_shop');
+            $table->text('r_code');
             $table->bigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

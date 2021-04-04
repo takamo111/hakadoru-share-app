@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
+        "mdbootstrap": "^4.19.2",
         "vue-star-rating": "^1.7.0"
     }
 }

@@ -31,14 +31,7 @@ class ArticleController extends Controller
             $m_reports = Article::whereBetween('articles.created_at', [now()->startOfMonth()->format('Y-m-d'), now()->endOfMonth()->format('Y-m-d')])->count();
             $w_reports = Article::whereBetween('articles.created_at', [now()->startOfWeek()->format('Y-m-d'), now()->endOfWeek()->format('Y-m-d')])->count();
 
-        
-            $count = $article->likes->count();
-
-
-
-
-
-                return view('articles.index', ['articles' => $articles,'m_reports' =>$m_reports,'w_reports' =>$w_reports,'count' => $count]);
+                return view('articles.index', ['articles' => $articles,'m_reports' =>$m_reports,'w_reports' =>$w_reports]);
                 var_dump($articles);
 
         }
@@ -59,11 +52,7 @@ class ArticleController extends Controller
 
                 }
             else
-
-                
-
                 return view('articles.create');
-
         }
                     
 
@@ -110,6 +99,7 @@ class ArticleController extends Controller
                 $article->r_item_url = $item['itemUrl'];
                 $article->r_price = $item['itemPrice'];
                 $article->r_shop = $item['shopName'];
+                $article->r_code = $item['itemCode'];
             }
             } else {
                 echo 'Error:'.$response->getMessage();

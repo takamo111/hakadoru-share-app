@@ -28,11 +28,10 @@
         </div>
         <thead>
             <tr>
-                <td>@sortablelink('id', '投稿順')
-                <td>@sortablelink('title', 'タイトル')
                 <td>@sortablelink('created_at', '投稿順')
+                <td>@sortablelink('title', 'タイトル')
                 <td>@sortablelink('updated_at', '更新日')
-                <th>@sortablelink('userCountSortable', 'いいね順')</th>
+              </th>
         </thead>
 
           <!-- 商品カード一覧 -->
@@ -54,6 +53,7 @@
                 <div class="card-body" style="height: 6rem;">
                   <h5 class="card-text text-truncate">{{ $article->title }}</h5>
                   <p class="card-text text-truncate">{{ $article->body }}</p>
+                  {{$article->count_likes }}
                   
                 </div>
                 <a class=" border border-primary text-center animated swing infinite  " href="{{ route('articles.show', ['article' => $article]) }}"  style="height: 3rem;">
@@ -127,7 +127,7 @@
               </table>
             </section> 
             <div>
-              <h4 class="h2-line mt-3">{{ $count }}</h4>
+              <h4 class="h2-line mt-3">{{($article->count_likes) }}</h4>
             </div> 
             <section class="box rounded my-3" style="border: 2px solid rgb(214, 223, 229);">
               <table class="table position-relative table-hover">
