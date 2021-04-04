@@ -2,11 +2,11 @@
 
 # アプリ名
  
-ハカドルシェア - Hakadoru Share -
+ハカドル=シェア - Hakadoru=Share -
 
 # 概要
  
-ハカドルシェア - Hakadoru Share -は、自分のおすすめ商品を紹介できるアプリです。  
+ハカドル=シェア - Hakadoru=Share -は、自分のおすすめ商品を紹介できるアプリです。  
   
 
 <a href="https://gyazo.com/07a43c72f10a861693bde666372d4289"><img src="https://i.gyazo.com/07a43c72f10a861693bde666372d4289.png" alt="Image from Gyazo" width="50%"/></a>
@@ -27,8 +27,8 @@ heroku
 ## トップページ
 ホーム画面のロゴは、ocanvaというロゴを作成できるサービスで作っています。 
 
+<a href="https://gyazo.com/64d14faad18971074030858738d90e35"><img src="https://i.gyazo.com/64d14faad18971074030858738d90e35.png" alt="Image from Gyazo" width="100%"/></a>
 
-<a href="https://gyazo.com/e26bb08ad859bbb94a800257ae936003"><img src="https://i.gyazo.com/e26bb08ad859bbb94a800257ae936003.png" alt="Image from Gyazo" width="100%"/></a>
 
 ### 出題カテゴリー選択
 出題するカテゴリーを選ぶことができます。鉱物の分類には元素鉱物、酸化鉱物、炭酸塩鉱物、珪酸塩鉱物、硫化鉱物、宝石、その他の7種類があります。全項目を選択するには『全項目チェック』のONを選択します。
@@ -104,8 +104,8 @@ RSpec
 VSCode
 
 # 課題や今後実装したいこと
-・問題のバリエーションを増やす  
-・ユーザー同士のコミュニケーション機能(いいねやコメントなど)  
+・
+・
 
 
 
@@ -116,80 +116,78 @@ VSCode
 |name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
+|twitter_id|string|null: false|
+|avatar|string|null: false|
+|nickname|string|null: false|
+
+### Association
+- has_many :articles
+- has_many :comments
+- belongs_to_many :followers
+- belongs_to_many :likes
+
+
+
+## articlesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|genre_id|integer|null: false|
+|title|string|null: false|
+|article_rating|text|null: false|
+|body|text|null: false|
+|r_image_url_a|text||
+|r_image_url_b|text||
+|r_image_url_c|text||
+|r_name|text|null: false|
+|r_caption|text|null: false|
+|r_item_url|text|null: false|
+|r_price|text|null: false|
+|r_shop|text|null: false|
+|r_code|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to_many :likes
+- belongs_to_many :followrs
+- has_many :comments
+
+
+
+## likesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|article_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_one :ranking
 
 
 
-
-## informationsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|percentage_correct_answer|int||
-
-
-## rankingsテーブル
+## followsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string||
+|follower_id|integer|null: false, foreign_key: true|
+|followee_id|integer|null: false, foreign_key: true|
 
+### Association
+- has_one :ranking
+
+
+
+## commentsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|comment_rating|text||
+|user_id|integer|null: false, foreign_key: true|
+|article_id|integer|null: false, foreign_key: true|
+
+### Association
 - belongs_to :user
-
-## categoriesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|name|string||
-
-
-### Association
-- belongs_to :keyword
-- belongs_to :quiz
-
-
-## quizzesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|title|string||
-|image_src|string|nullable|
-|answers_id|int||
-|categories_id|int||
-
-### Association
-- has_one :answer
-- has_one :category
-
-
-## answersテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|answer_1|string||
-|answer_2|string||
-|answer_3|string||
-|answer_4|string||
-|correct_answer_no|int||
-|commentary|text||
-
-### Association
-- belongs_to :quiz
-
-
-## keywordsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|initial|string||
-|description|text||
-|keyword|string||
-|image_src|string|nullable|
-|categories_id|int||
-
-### Association
-- has_one :category
-
-
+- belongs_to :article
