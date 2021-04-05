@@ -7,9 +7,8 @@
 # 概要
  
 ハカドル=シェア - Hakadoru=Share -は、自分のおすすめ商品を紹介できるアプリです。  
-  
+  <a href="https://gyazo.com/64d14faad18971074030858738d90e35"><img src="https://i.gyazo.com/64d14faad18971074030858738d90e35.png" alt="Image from Gyazo" width="50%"/></a>
 
-<a href="https://gyazo.com/07a43c72f10a861693bde666372d4289"><img src="https://i.gyazo.com/07a43c72f10a861693bde666372d4289.png" alt="Image from Gyazo" width="50%"/></a>
 
 
  
