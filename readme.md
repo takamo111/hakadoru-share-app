@@ -7,7 +7,7 @@
 # 概要
  
 ハカドル=シェア - Hakadoru=Share -は、自分のおすすめ商品を紹介できるアプリです。  
-  <a href="https://gyazo.com/64d14faad18971074030858738d90e35"><img src="https://i.gyazo.com/64d14faad18971074030858738d90e35.png" alt="Image from Gyazo" width="50%"/></a>
+  <a href="https://gyazo.com/64d14faad18971074030858738d90e35"><img src="https://i.gyazo.com/64d14faad18971074030858738d90e35.png" alt="Image from Gyazo" width="30%"/></a>
 
 
 
@@ -24,30 +24,101 @@ heroku
 # DEMO
 
 ## トップページ
-ホーム画面のロゴは、ocanvaというロゴを作成できるサービスで作っています。 
+ホーム画面のロゴは、canvaというロゴを作成できるサービスで作っています。 
+上部ナビバーではそれぞれユーザー登録、ログイン、商品検索、記事投稿、投稿記事の確認、マイページ画面へ移動できます。
+全ての機能を使うにはユーザー登録が必要です。
+ホームの下に移動するとサイトの使用方法が記載されています。
 
-<a href="https://gyazo.com/64d14faad18971074030858738d90e35"><img src="https://i.gyazo.com/64d14faad18971074030858738d90e35.png" alt="Image from Gyazo" width="100%"/></a>
+<a href="https://gyazo.com/3491cea4376a03534da5607bff6e07a7"><img src="https://i.gyazo.com/3491cea4376a03534da5607bff6e07a7.png" alt="Image from Gyazo" width="50%"/></a>
 
 
-### 出題カテゴリー選択
-出題するカテゴリーを選ぶことができます。鉱物の分類には元素鉱物、酸化鉱物、炭酸塩鉱物、珪酸塩鉱物、硫化鉱物、宝石、その他の7種類があります。全項目を選択するには『全項目チェック』のONを選択します。
-クイズを開始する場合は『出題開始』を押してください(問題が10問に満たない場合はトップページに戻ります）  
-
-<a href="https://gyazo.com/7a31ba98210e5239a1f83730362288be"><img src="https://i.gyazo.com/7a31ba98210e5239a1f83730362288be.png" alt="Image from Gyazo" width="100%"/></a>
-
-### ランキング機能
-会員登録を行いクイズを回答すると、高得点の順にこのランキングに名前が載ります。総合、月間、週間ごとにランキングが分かれています。  
-
-<a href="https://gyazo.com/392583d2e4992af5931f32480c52b71d"><img src="https://i.gyazo.com/392583d2e4992af5931f32480c52b71d.png" alt="Image from Gyazo" width="50%"/></a>
 
 ## 会員登録
 ### 新規登録
-登録を行わなくてもクイズはできますが、新規登録を行うとマイページ機能とランキング機能が使えます。登録には名前、メールアドレスとパスワードを入力します。  
+新規登録を行うと記事投稿が行えます。登録には名前、メールアドレスとパスワードを入力します。
+googleアカウントでの登録も可能です。  
+<a href="https://gyazo.com/32da0a53e79f21f1ee1180c03d721097"><img src="https://i.gyazo.com/32da0a53e79f21f1ee1180c03d721097.png" alt="Image from Gyazo" width="50%"/></a>
 
-<a href="https://gyazo.com/7d584cbe70948c36b4771699436e5398"><img src="https://i.gyazo.com/7d584cbe70948c36b4771699436e5398.png" alt="Image from Gyazo" width="100%"/></a>
 
-### サインイン  
-<a href="https://gyazo.com/1ca821f19581c8a9ad65d9f1c93002ec"><img src="https://i.gyazo.com/1ca821f19581c8a9ad65d9f1c93002ec.png" alt="Image from Gyazo" width="100%"/></a>
+### ログイン 
+<a href="https://gyazo.com/ffcb308fe29c7671741c8129fc3c73a0"><img src="https://i.gyazo.com/ffcb308fe29c7671741c8129fc3c73a0.png" alt="Image from Gyazo" width="50%"/></a>
+
+
+## 商品検索
+
+### 商品検索
+記事投稿を行うには紹介したい記事の商品コードが必要になります(商品情報の抽出には楽天APIを使用しています)
+検索フォームで名前を入力して検索したい商品を探してください。記事を見つけたら投稿するボタンから投稿画面に移行するか(自動で商品コードを取得)、商品コードを控えておいてください。
+<img src="images/search.png" width="50%"> 
+
+### 商品詳細
+商品詳細ボタンを押すと商品の詳細情報を表示します。
+
+
+## 投稿画面
+画像と、一の句〜三の句を記入します。  
+任意でコメントも書き込め、こちらは詳細画面で確認できます。  
+
+<a href="https://gyazo.com/52d225610e2e5b6e1ada9a61002d432e"><img src="https://i.gyazo.com/52d225610e2e5b6e1ada9a61002d432e.jpg" alt="Image from Gyazo" width="50%"/></a>
+
+
+## 商品検索画面
+
+<img src="images/search.png" width="50%"> 
+
+また、過去の投稿に関してはページの下で確認できるようにしています。こちらは投稿時間もしくは、いいねの数でソートできるようになっています。  
+
+<a href="https://gyazo.com/86318b4ba6ae4072ec99016b5aa94952"><img src="https://i.gyazo.com/86318b4ba6ae4072ec99016b5aa94952.png" alt="Image from Gyazo" width="100%"/></a>  
+
+## 詳細画面  
+
+詳細画面では、投稿のより詳しい情報を見ることができます。投稿画面でコメントを入力した場合、こちらに表示されます。また、閲覧者はこちらで投稿にいいねをしたりコメントを残すこともできます。  
+
+<a href="https://gyazo.com/c8ceaa9afb7edbc1b544e14d6fcbb15f"><img src="https://i.gyazo.com/c8ceaa9afb7edbc1b544e14d6fcbb15f.jpg" alt="Image from Gyazo" width="50%"/></a>
+
+コメント機能  
+<a href="https://gyazo.com/a58a19d02282c5e579ccc14551fb9d9d"><img src="https://i.gyazo.com/a58a19d02282c5e579ccc14551fb9d9d.png" alt="Image from Gyazo" width="50%"/></a>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## クイズ画面
 

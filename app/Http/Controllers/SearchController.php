@@ -84,14 +84,12 @@ class SearchController extends Controller
             ));
             // レスポンスが正しいかを isOk() で確認
             if ($response->isOk()) {
-            $items = array()->take(10)->get();
+               $items = array();
             foreach ($response as $item){
                 $str = str_replace("_ex=128x128", "_ex=175x175", $item['mediumImageUrls'][0]['imageUrl']);
                 $items[] = array(
                     
                     'RImageUrlA' => str_replace("_ex=128x128", "_ex=175x175", $item['mediumImageUrls'][0]['imageUrl']),
-                    'RImageUrlB' => str_replace("_ex=128x128", "_ex=175x175", $item['mediumImageUrls'][1]['imageUrl']),
-                    'RImageUrlC' => str_replace("_ex=128x128", "_ex=175x175", $item['mediumImageUrls'][2]['imageUrl']),
 
                     'itemName' => $item['itemName'],
                     'itemPrice' => $item['itemPrice'],

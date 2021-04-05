@@ -44,8 +44,8 @@
               @guest
                 <li class="nav-item mx-1 underline_effect">
                   <a href="/" class="nav-link text-center p-0 text-white">
-                  <i class="fa fa-question-circle fa-lg"></i> 
-                    <span class="text-center d-block" style="font-size: 10px;">このサイトについて</span>
+                  <i class="fa fa-home fa-lg"></i> 
+                    <span class="text-center d-block" style="font-size: 10px;">ホーム</span>
                   </a>
                 </li>              
                 <li class="nav-item mx-1 underline_effect">
@@ -77,9 +77,9 @@
                 @else
                 <!-- ヘッダー右側 ログイン後 -->
                 <li class="nav-item mx-1 underline_effect">
-                  <a href="" class="nav-link text-center p-0 text-white">
+                  <a href="/" class="nav-link text-center p-0 text-white">
                     <i class="fa fa-question-circle fa-lg"></i> 
-                      <span class="text-center d-block" style="font-size: 10px;">このサイトについて</span>
+                    <span class="text-center d-block" style="font-size: 10px;">ホーム</span>
                   </a>
                 </li>
                   
@@ -104,7 +104,7 @@
                 @auth
                 <li class="av-item mx-1 underline_effect">
                   <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-user-circle"></i>
+                    <i class="fas fa-user-circle" style="font-size: 20px;"></i>
                  </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                     <button class="dropdown-item" type="button" onclick="location.href='{{ route("users.show", ["name" => Auth::user()->name]) }}'">
