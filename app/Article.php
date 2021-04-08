@@ -12,7 +12,7 @@ class Article extends Model
 {
 
     use Sortable; 
-    public $sortable = ['id', 'title', 'created_at', 'updated_at'];
+    public $sortable = ['id', 'title', 'created_at', 'updated_at','likes_count'];
 
       
     public function user(): BelongsTo
@@ -44,6 +44,12 @@ class Article extends Model
     public function getCountLikesAttribute(): int
     {
         return $this->likes->count();
+    }
+
+
+    public function likesCountSortable($query, $direction)
+    {
+            return $query->orderBy('likes_count', $direction);
     }
 
     protected $fillable = [

@@ -29,8 +29,9 @@
         <thead>
             <tr>
                 <td>@sortablelink('created_at', '投稿順')
-                <td>@sortablelink('title', 'タイトル')
-                <td>@sortablelink('updated_at', '更新日')
+                <td>@sortablelink('title', 'タイトル順')
+                <td>@sortablelink('updated_at', '更新日順')
+                <td>@sortablelink('likes_count', 'いいね順')
               </th>
         </thead>
           <!-- 商品カード一覧 -->
@@ -53,7 +54,7 @@
                 <a class=" border border-primary text-center animated swing infinite  " href="{{ route('articles.show', ['article' => $article]) }}"  style="height: 3rem;">
                   <h5 class="text-primary" > 
                   <i class="fas fa-newspaper mr-1"></i>         
-                  <p>レビュー詳細</p>
+                  <p>レビュー詳細{{ $article->likes_count }} </p>
                   </h5>
                 </a>
               </div>
