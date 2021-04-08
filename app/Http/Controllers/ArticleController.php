@@ -55,9 +55,6 @@ class ArticleController extends Controller
                 return view('articles.create');
         }
                     
-
-        
-
         public function store(ArticleRequest $request, Article $article)
         {
 
@@ -116,14 +113,11 @@ class ArticleController extends Controller
             return redirect()->route('articles.index');
         }
 
-
         public function top ()
-
         {
                 $articles = Article::all()->sortByDesc('created_at');
                 return view('articles.top', ['articles' => $articles]);
                     
-
         }
 
         public function edit(Article $article)
@@ -142,8 +136,7 @@ class ArticleController extends Controller
             $article->delete();
             return redirect()->route('articles.index');
         }
-
-        
+      
         public function show(Article $article, Comment $comment)
         {
             return view('articles.show', ['article' => $article]);
@@ -169,8 +162,5 @@ class ArticleController extends Controller
                 'countLikes' => $article->count_likes,
             ];
         }
-
-    }
-
-    
+    }  
 

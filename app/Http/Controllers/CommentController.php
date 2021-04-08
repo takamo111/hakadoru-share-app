@@ -9,7 +9,6 @@ use App\User;
 use App\Http\Requests\CommentRequest;
 use Illuminate\Support\Facades\Auth;
 
-
 class CommentController extends Controller
 {
     public function __construct()
@@ -27,13 +26,10 @@ class CommentController extends Controller
         $comment->save();
         return redirect()->back();
     }
-
     public function destroy(Request $request)
     {
         $comment = Comment::find($request->comment_id);
         $comment->delete();
         return redirect('/');
     }
- 
-    
 }

@@ -87,10 +87,8 @@ class SearchController extends Controller
                $items = array();
             foreach ($response as $item){
                 $str = str_replace("_ex=128x128", "_ex=175x175", $item['mediumImageUrls'][0]['imageUrl']);
-                $items[] = array(
-                    
+                $items[] = array(                
                     'RImageUrlA' => str_replace("_ex=128x128", "_ex=175x175", $item['mediumImageUrls'][0]['imageUrl']),
-
                     'itemName' => $item['itemName'],
                     'itemPrice' => $item['itemPrice'],
                     'itemUrl' => $item['itemUrl'],
@@ -99,24 +97,12 @@ class SearchController extends Controller
                     'shopName' => $item['shopName'],
                     'mediumImageUrls' => $str,
                     'siteIcon' => "../images/rakuten_logo.png",
-                );
-
-                
+                );               
             }
-
             } else {
                 echo 'Error:'.$response->getMessage();
               }
-    
             } 
-            
-
         return view('searchs.detail',compact('items'));
     }  
-    
-
-
-
-    
-
 }

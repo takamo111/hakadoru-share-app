@@ -16,7 +16,6 @@
           <div class="main_column col-md-12 ">
             <div class="row bg-secondary ">
               @foreach($articles as $article)
-
               <!-- 商品カード -->
                 <div class="card m-2 mx-auto " style="width: 15rem;" >
                 
