@@ -42,7 +42,7 @@
                 <div class='card-image-main border' >
                   <img class='card-image' src="{{ $article->r_image_url_a }}" width="100%" height="180">
                   <div class=likes-count>
-                  <i class="fas fa-border fa-heart fa-1x red-text  " style="background-color: white;">
+                  <i class="fas fa-border fa-heart fa-1x red-text " style="background-color: white;">
                   {{ $article->likes_count }} 
                     </i>
                   </div>

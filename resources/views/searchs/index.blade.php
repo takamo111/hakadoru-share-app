@@ -1,13 +1,9 @@
 @extends('layouts.app')
-
 @section('css')
-    <link href="{{ asset('css/top.css') }}" rel="stylesheet">
+<link href="{{ asset('css/top.css') }}" rel="stylesheet">
 @endsection
-
 @section('content')
-
 <main >
-
 <div class="container-fluid">
 <div class="row">
 <!--↓↓ 検索フォーム -->
@@ -19,10 +15,19 @@
     <input type="submit" value="検索" class="btn btn-info">
   </form>
   </div>
-
     <!-- 商品カード一覧 -->
     <div class="main_column col-md-11 mx-auto ">
-    @if($items > 0)  
+    @if($items == 0)  
+    <li class="nav-item mx-1 underline_effect">
+                  <div class="nav-link text-center p-0 text-white">
+                  <i class="fas fa-angle-double-up fa-3x"></i>
+                    <i class="fa fa-search fa-lg fa-3x"></i> 
+                    <span class="text-center d-block" style="font-size: 40px;">商品を検索</span>
+</div>
+
+
+</div>
+    @elseif($items > 0)  
       <div class="row bg-secondary ">
       @foreach($items as $item)      
         <!-- 商品カード -->
@@ -52,7 +57,6 @@
         </div>
         @endforeach 
       </div> 
-
     @endif
     </div>
 </div>

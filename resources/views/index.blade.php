@@ -56,7 +56,6 @@
             <i class="fa fa-angle-down fa-3x mr-2"  ></i>
             </div>
             <div class="container py-4 border">
-              <h5 class="text-center font-weight-bold mt-4">STEP2 商品検索</h5>
               <div class="container">
                     <img src="{{ asset('images/search.png') }}" class="img-fluid my-3" alt="Responsive image" width="100%" height="100%"></img>
                   </div>
