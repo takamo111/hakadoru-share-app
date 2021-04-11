@@ -46,7 +46,12 @@
             <div class="container py-4 border">
               <h5 class="text-center font-weight-bold my-3">STEP1 新規登録</h5>            
               <div class="text-center my-1"> 
+                @guest
                 <a href="{{ route('register') }}" class="btn btn-danger btn-lg">
+                @endguest
+                @auth
+                <a href="/"  class="btn btn-danger btn-lg">
+                @endauth
                 <i class="fa fa-user-plus mr-2"></i>
                   新規登録
                 </a>

@@ -77,7 +77,12 @@
             </div>
             <h5 class="text-center font-weight-bold">STEP1 ユーザー登録</h5>
             <div class="text-center my-1"> 
+              @guest
               <a href="{{ route('register') }}" class="btn btn-danger btn">
+              @endguest
+              @auth
+              <a href="/" class="btn btn-danger btn">
+              @endauth
               <i class="fa fa-user-plus mr-2"></i>
                 新規登録
               </a>
