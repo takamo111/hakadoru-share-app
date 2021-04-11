@@ -1,9 +1,9 @@
     <div class="card">
       <div class="card-body">
         <div class="d-flex flex-row">
-          <a href="{{ route('users.show', ['name' => $user->name]) }}" class="text-dark">
+          <div class="text-dark">
             <i class="fas fa-user-circle fa-3x"></i>
-          </a>
+          </div>
           @if( Auth::id() !== $user->id )
             <follow-button
               class="ml-auto"
