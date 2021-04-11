@@ -42,7 +42,7 @@
                 <div class='card-image-main border' >
                   <img class='card-image' src="{{ $article->r_image_url_a }}" width="100%" height="180">
                   <div class=likes-count>
-                  <i class="fas fa-border fa-heart fa-1x red-text " style="background-color: white;">
+                  <i class="likes-count-logo fas fa-border fa-heart fa-1x red-text " style="background-color: white;">
                   {{ $article->likes_count }} 
                     </i>
                   </div>
@@ -84,7 +84,7 @@
             </div>
             <h5 class="text-center font-weight-bold mt-4">STEP2 商品検索</h5>
             <div class="text-center mt-1"> 
-              <a href="route('searchs.index')" class="btn btn-danger ">
+              <a href="{{route('searchs.index')}}" class="btn btn-danger ">
               <i class="fa fa-search mr-2"></i>
                 商品検索
               </a>

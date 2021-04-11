@@ -79,7 +79,7 @@
                 <!-- ヘッダー右側 ログイン後 -->
                 <li class="nav-item mx-1 underline_effect">
                   <a href="/" class="nav-link text-center p-0 text-white">
-                    <i class="fa fa-question-circle fa-lg"></i> 
+                    <i class="fa fa-home fa-lg"></i> 
                     <span class="text-center d-block" style="font-size: 10px;">ホーム</span>
                   </a>
                 </li>

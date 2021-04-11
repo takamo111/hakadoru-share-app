@@ -83,7 +83,6 @@ class ArticleController extends Controller
             if ($response->isOk()) {
             $items = array();
             foreach ($response as $item){
-
                 $article->r_image_url_a = str_replace("_ex=128x128", "_ex=175x175", $item['mediumImageUrls'][0]['imageUrl']);
                 if(isset($item['mediumImageUrls'][1]['imageUrl'])){
                 $article->r_image_url_b = str_replace("_ex=128x128", "_ex=175x175", $item['mediumImageUrls'][1]['imageUrl']);
@@ -101,9 +100,7 @@ class ArticleController extends Controller
             } else {
                 echo 'Error:'.$response->getMessage();
               }
-    
             } 
-
             $article->genre_id = $request->genre_id;
             $article->title = $request->title;
             $article->body = $request->body;
