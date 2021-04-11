@@ -1,12 +1,8 @@
 @extends('layouts.app')
-
 @section('css')
     <link href="{{ asset('css/top.css') }}" rel="stylesheet">
 @endsection
-
 @section('content')
-
-
 <div class="container">
   <div class="pb-3">
     <div class="row justify-content-center">
@@ -14,6 +10,7 @@
         <div class="card">
           <h5 class="card-header">
             <a href="{{ route('users.show', ['name' => $article->user->name]) }}">投稿者：{{ $article->user->name }}</a>
+
           </h5>
           <div class="card-body">
             <div>
@@ -74,7 +71,7 @@
                 </tr>
               </tbody>
             </table>
-            <div class="font-weight-bold">いいね！</div>
+            <div class="font-weight-bold ">いいね！</div>
             <article-like
               :initial-is-liked-by='@json($article->isLikedBy(Auth::user()))'
               :initial-count-likes='@json($article->count_likes)'
@@ -114,10 +111,8 @@
               <input type='submit' class='btn btn-primary' value='コメントする'>
             </div>
         </div>
-      </form>
-   
-            @foreach ($article->comments as $comment) 
-            
+      </form>   
+            @foreach ($article->comments as $comment)         
             <div class="table border-top border-dark pt-3">
             <a class="font-weight-bold text-dark" href="/users/{{ $comment->user->name }}">投稿者：{{ $comment->user->name }}</a>
             <star-rating :rating="{{ $comment->comment_rating }}" :read-only="true" :star-size="17" :show-rating="false" ></star-rating>

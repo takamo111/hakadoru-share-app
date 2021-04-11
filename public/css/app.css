@@ -11040,7 +11040,27 @@ a.text-dark:focus {
 .dropdown {
   position: absolute;
   top: 0;
-  left: 2;
+}
+
+.fa-heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.detail-button {
+  display: block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid #1B1B1B;
+}
+
+.detail-button:hover {
+  background: #1B1B1B;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .center-review {

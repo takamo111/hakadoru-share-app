@@ -1,11 +1,9 @@
 @extends('layouts.app')
 
 @section('css')
-    <link href="{{ asset('css/top.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/top.css') }}" rel="stylesheet">
 @endsection
-
 @section('content')
-
 <main class="pb-3">
   <div id="contentsBody" >
     <div class="row">
@@ -40,27 +38,33 @@
             <div class="row bg-secondary ">
               @foreach($articles as $article)            
               <!-- 商品カード -->
-              <div class="card m-2  mx-auto " style="width: 15rem;" >          
+              <div class="card m-2  mx-auto" style="width: 15rem;" >          
                 <div class='card-image-main border' >
-                  <img class='card-image' src="{{ $article->r_image_url_a }}" width="100%" height="180"></img>
+                  <img class='card-image' src="{{ $article->r_image_url_a }}" width="100%" height="180">
+                  <div class=likes-count>
+                  <i class="fas fa-border fa-heart fa-1x red-text  " style="background-color: white;">
+                  {{ $article->likes_count }} 
+                    </i>
+                  </div>
                   <!-- dropdown -->
                   @include('articles.dropdown')
                   <!-- dropdown -->
+                </img>
                 </div>
                 <div class="card-body" style="height: 6rem;">
                   <h5 class="card-text text-truncate">{{ $article->title }}</h5>
                   <p class="card-text text-truncate">{{ $article->body }}</p>            
                 </div>
-                <a class=" border border-primary text-center animated swing infinite  " href="{{ route('articles.show', ['article' => $article]) }}"  style="height: 3rem;">
+                <a class="detail-button border border-primary text-center " href="{{ route('articles.show', ['article' => $article]) }}"  style="height: 3rem;">
                   <h5 class="text-primary" > 
                   <i class="fas fa-newspaper mr-1"></i>         
-                  <p>レビュー詳細{{ $article->likes_count }} </p>
+                  <p>レビュー詳細</p>
                   </h5>
                 </a>
               </div>
               @endforeach   
             </div>
-            {{ $articles->appends(request()->query())->links()  }}
+            {{ $articles->appends(request()->query())->links()}}
           </div>  
         </div>
       </div>
@@ -94,7 +98,6 @@
             </div>
           </div>
         </div>  
-        
         <div class="bg-light m-4">  
           <div class="container py-4">   
             <div class="asideTitle">
@@ -113,7 +116,7 @@
                     </tr> 
                     <tr>
                       <td>総数</td> 
-                      <td class="font-weight-bold">{{ \App\Article::count() }}</td>
+                      <td class="font-weight-bold">{{ \App\Article::count() }}</td> 
                     </tr>
                 </tbody>
               </table>

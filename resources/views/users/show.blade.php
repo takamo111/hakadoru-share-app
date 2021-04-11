@@ -26,7 +26,7 @@
                     <h5 class="card-text text-truncate">{{ $article->title }}</h5>
                     <p class="card-text text-truncate">{{ $article->body }}</p>                   
                   </div>
-                  <a class=" border border-primary text-center animated swing infinite  " href="{{ route('articles.show', ['article' => $article]) }}"  style="height: 3rem;">
+                  <a class="detail-button border border-primary text-center" href="{{ route('articles.show', ['article' => $article]) }}"  style="height: 3rem;">
                     <h5 class="text-primary" > 
                     <i class="fas fa-newspaper mr-1"></i>               
                       <p>レビュー詳細</p>

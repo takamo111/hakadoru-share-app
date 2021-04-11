@@ -1,8 +1,8 @@
 @if( Auth::id() === $article->user_id )
   <div class="dropdown">
     <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <button type="button" class="btn btn-link text-muted m-0 p-2">
-        <i class="fas fa-ellipsis-v"></i>
+      <button type="button" class="btn btn-link text-muted m-0 p-2 border-dark "style="background-color: white;">
+        <i class="fas fa-ellipsis-v" ></i>
       </button>
     </a>
     <div class="dropdown-menu dropdown-menu-right ">

@@ -46,7 +46,7 @@
             <div class="container py-4 border">
               <h5 class="text-center font-weight-bold my-3">STEP1 新規登録</h5>            
               <div class="text-center my-1"> 
-                <a href="{{ route('register') }}" class="btn btn-danger btn">
+                <a href="{{ route('register') }}" class="btn btn-danger btn-lg">
                 <i class="fa fa-user-plus mr-2"></i>
                   新規登録
                 </a>
@@ -111,6 +111,9 @@
       </div>
     </section>
     <div class="top-foot">
+    <div class="text-center">
+              <h2 class="mt-5 text-white "> 皆様の投稿をお待ちしています！ </h2>
+            </div>
     </div>
   </div>
 </div>
