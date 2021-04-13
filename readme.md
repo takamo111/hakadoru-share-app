@@ -29,8 +29,6 @@ Laravelでの2作品目として違うジャンルのものを作成したいと
   
 <a href="https://gyazo.com/3491cea4376a03534da5607bff6e07a7"><img src="https://i.gyazo.com/3491cea4376a03534da5607bff6e07a7.png" alt="Image from Gyazo" width="50%"/></a>
 
-
-
 ## 会員登録
 ### 新規登録
 新規登録を行うと記事投稿が行えます。登録には名前、メールアドレスとパスワードを入力します。  
@@ -40,7 +38,6 @@ googleアカウントでの登録も可能です。
 
 ### ログイン 
 <a href="https://gyazo.com/ffcb308fe29c7671741c8129fc3c73a0"><img src="https://i.gyazo.com/ffcb308fe29c7671741c8129fc3c73a0.png" alt="Image from Gyazo" width="50%"/></a>
-
 
 ## 商品検索画面
 
@@ -114,7 +111,6 @@ VSCode
 
 # 課題や今後実装したいこと
 ・いいね機能の拡張
-・ソート機能の拡張
 ・視覚効果をもう少し入れる
 
 
